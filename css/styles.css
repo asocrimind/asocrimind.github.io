@@ -1,0 +1,793 @@
+:root {
+    --color-principal: #1d3b36;
+    --color-secundario: #b49a63;
+    --color-claro: #f5f4f0;
+    --color-oscuro: #17201e;
+    --color-texto: #4b5552;
+    --blanco: #ffffff;
+    --transicion: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    color: var(--color-texto);
+    background: var(--blanco);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.navbar-inicio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0;
+    background: transparent;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--blanco) !important;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.nombre-empresa {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+}
+
+.nombre-empresa span {
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.nombre-empresa strong {
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.menu-btn {
+    width: 48px;
+    height: 48px;
+    border: none;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.menu-btn span {
+    display: block;
+    height: 2px;
+    background: var(--blanco);
+    transition: var(--transicion);
+}
+
+.menu-btn span:nth-child(1) {
+    width: 30px;
+}
+
+.menu-btn span:nth-child(2) {
+    width: 22px;
+}
+
+.menu-btn span:nth-child(3) {
+    width: 30px;
+}
+
+.menu-btn:hover span:nth-child(2) {
+    width: 30px;
+}
+
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 330px;
+    height: 100vh;
+    background: var(--blanco);
+    z-index: 2000;
+    padding: 30px;
+    transition: var(--transicion);
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.15);
+}
+
+.menu-lateral.activo {
+    right: 0;
+}
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1500;
+    transition: var(--transicion);
+}
+
+.menu-overlay.activo {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu-header h3 {
+    color: var(--color-principal);
+    margin: 0;
+}
+
+.menu-header button {
+    background: none;
+    border: none;
+    font-size: 25px;
+    color: var(--color-principal);
+    cursor: pointer;
+}
+
+.menu-lista {
+    list-style: none;
+    padding: 30px 0;
+}
+
+.menu-lista li {
+    margin-bottom: 10px;
+}
+
+.menu-lista a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 14px;
+    color: var(--color-oscuro);
+    border-radius: 6px;
+    transition: var(--transicion);
+}
+
+.menu-lista a i {
+    width: 20px;
+    color: var(--color-secundario);
+}
+
+.menu-lista a:hover {
+    background: var(--color-claro);
+    padding-left: 20px;
+}
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+    background-image: url("../img/encabezado.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 100px 7%;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(23, 32, 30, 0.45);
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,rgba(0, 0, 0, 0.25),rgba(0, 0, 0, 0.05));
+}
+
+.hero-contenido {
+    position: relative;
+    z-index: 2;
+    max-width: 400px;
+    margin-left: auto;
+    color: var(--blanco);
+    padding-bottom: 30px;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 5vw, 40px);
+    line-height: 1.08;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.hero-descripcion {
+    max-width: 500px;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.btn-principal,
+.btn-secundario {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 25px;
+    border: 1px solid var(--blanco);
+    color: var(--blanco);
+    font-size: 14px;
+    transition: var(--transicion);
+}
+
+.btn-principal:hover {
+    background: var(--blanco);
+    color: var(--color-principal);
+}
+
+.btn-secundario {
+    border-color: var(--color-principal);
+    color: var(--color-principal);
+    margin-top: 15px;
+}
+
+.btn-secundario:hover {
+    background: var(--color-principal);
+    color: var(--blanco);
+}
+
+.btn-oscuro {
+    background: var(--color-principal);
+    border-color: var(--color-principal);
+}
+
+.btn-oscuro:hover {
+    background: transparent;
+    color: var(--color-principal);
+}
+
+.seccion {
+    padding: 110px 0;
+}
+
+.etiqueta {
+    display: inline-block;
+    color: var(--color-secundario);
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+h2 {
+    color: var(--color-principal);
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 500;
+}
+
+.linea {
+    width: 60px;
+    height: 2px;
+    background: var(--color-secundario);
+    margin: 20px 0 25px;
+}
+
+.nosotros {
+    background: var(--blanco);
+}
+
+.nosotros p {
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.carrusel-nosotros {
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.carrusel-nosotros img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.valores {
+    background: var(--color-claro);
+}
+
+.encabezado-seccion {
+    margin-bottom: 60px;
+}
+
+.valor-card {
+    text-align: center;
+    padding: 40px 30px;
+    height: 100%;
+    background: var(--blanco);
+    transition: var(--transicion);
+}
+
+.valor-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.valor-icono {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-secundario);
+    border-radius: 50%;
+    color: var(--color-secundario);
+    font-size: 22px;
+}
+
+.valor-card h3 {
+    color: var(--color-principal);
+    margin-bottom: 15px;
+}
+
+.valor-card p {
+    line-height: 1.7;
+    margin: 0;
+}
+
+.servicios {
+    background: var(--blanco);
+}
+
+.encabezado-servicios {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.encabezado-servicios > p {
+    max-width: 400px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.servicio-card {
+    height: 100%;
+    background: var(--color-claro);
+    transition: var(--transicion);
+}
+
+.servicio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.servicio-imagen {
+    overflow: hidden;
+    height: 230px;
+}
+
+.servicio-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.servicio-card:hover img {
+    transform: scale(1.05);
+}
+
+.servicio-contenido {
+    padding: 30px;
+}
+
+.numero-servicio {
+    color: var(--color-secundario);
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.servicio-contenido h3 {
+    color: var(--color-principal);
+    margin: 10px 0 15px;
+}
+
+.servicio-contenido p {
+    line-height: 1.7;
+}
+
+.servicio-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-principal);
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.servicio-link:hover {
+    color: var(--color-secundario);
+}
+
+.boton-todos {
+    margin-top: 50px;
+}
+
+.footer {
+    padding: 70px 0 70px;
+    background: var(--color-oscuro);
+    color: #d7ddda;
+}
+
+.footer-marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.footer-marca img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.footer-marca div {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-marca strong {
+    color: var(--blanco);
+    letter-spacing: 2px;
+}
+
+.footer-marca span {
+    font-size: 12px;
+}
+
+.footer-descripcion {
+    max-width: 350px;
+    line-height: 1.7;
+}
+
+.footer h4 {
+    color: var(--blanco);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.redes {
+    display: flex;
+    gap: 10px;
+}
+
+.redes a {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #59625f;
+    border-radius: 50%;
+}
+
+.redes a:hover {
+    border-color: var(--color-secundario);
+}
+
+.footer-bottom {
+    margin-top: 60px;
+    padding: 20px 0;
+    border-top: 1px solid #3941;
+}
+
+@media (max-width: 991px) {
+    .navbar-inicio {
+        padding: 15px 0;
+    }
+    .logo {
+        width: 48px;
+        height: 48px;
+    }
+    .nombre-empresa span {
+        font-size: 11px;
+    }
+    .nombre-empresa strong {
+        font-size: 17px;
+    }
+    .hero {
+        min-height: 90vh;
+        padding: 90px 6% 70px;
+        background-position: center;
+    }
+    .hero-contenido {
+        max-width: 450px;
+        padding-bottom: 10px;
+    }
+    .hero h1 {
+        font-size: clamp(40px, 6vw, 52px);
+    }
+    .hero-descripcion {
+        font-size: 15px;
+    }
+    .seccion {
+        padding: 85px 0;
+    }
+    .encabezado-seccion {
+        margin-bottom: 45px;
+    }
+    .valor-card {
+        padding: 35px 25px;
+    }
+    .servicio-imagen {
+        height: 210px;
+    }
+    .servicio-contenido {
+        padding: 25px;
+    }
+    .encabezado-servicios {
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+    .boton-todos {
+        margin-top: 40px;
+    }
+    .footer {
+        padding: 60px 0;
+    }
+    .footer-bottom {
+        margin-top: 45px;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-inicio {
+        padding: 12px 0;
+    }
+    .logo {
+        width: 45px;
+        height: 45px;
+    }
+    .nombre-empresa {
+        line-height: 1.1;
+    }
+    .nombre-empresa span {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+    }
+    .nombre-empresa strong {
+        font-size: 16px;
+        letter-spacing: 1.5px;
+    }
+    .menu-btn {
+        width: 44px;
+        height: 44px;
+    }
+    .menu-lateral {
+        width: 300px;
+        max-width: 85%;
+        padding: 25px;
+    }
+    .menu-lista {
+        padding: 25px 0;
+    }
+    .hero {
+        min-height: 100vh;
+        padding: 100px 7% 55px;
+        align-items: flex-end;
+        background-position: center;
+    }
+    .hero-contenido {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        padding-bottom: 0;
+    }
+    .hero h1 {
+        font-size: clamp(38px, 11vw, 48px);
+        line-height: 1.08;
+        margin-bottom: 15px;
+    }
+    .hero-descripcion {
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 25px;
+        max-width: 100%;
+    }
+    .btn-principal,
+    .btn-secundario {
+        padding: 12px 20px;
+        font-size: 13px;
+    }
+    .seccion {
+        padding: 70px 0;
+    }
+    .etiqueta {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+    h2 {
+        font-size: clamp(30px, 8vw, 40px);
+    }
+    .linea {
+        margin: 15px 0 20px;
+    }
+    .nosotros .row {
+        row-gap: 35px;
+    }
+    .nosotros p {
+        font-size: 14px;
+        line-height: 1.75;
+    }
+    .carrusel-nosotros img {
+        height: 250px;
+    }
+    .encabezado-seccion {
+        margin-bottom: 35px;
+    }
+    .valor-card {
+        padding: 30px 25px;
+    }
+    .valor-icono {
+        width: 58px;
+        height: 58px;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    .valor-card h3 {
+        font-size: 20px;
+    }
+    .valor-card p {
+        font-size: 14px;
+    }
+    .encabezado-servicios {
+        display: block;
+        margin-bottom: 35px;
+    }
+    .encabezado-servicios > p {
+        max-width: 100%;
+        margin-top: 20px;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+    .servicio-card {
+        margin-bottom: 25px;
+    }
+    .servicio-imagen {
+        height: 220px;
+    }
+    .servicio-contenido {
+        padding: 25px;
+    }
+    .servicio-contenido h3 {
+        font-size: 21px;
+    }
+    .servicio-contenido p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+    .servicio-link {
+        font-size: 13px;
+    }
+    .boton-todos {
+        margin-top: 25px;
+    }
+    .footer {
+        padding: 55px 0;
+    }
+    .footer .row {
+        row-gap: 35px;
+    }
+    .footer-descripcion {
+        max-width: 100%;
+        font-size: 13px;
+    }
+    .footer h4 {
+        margin-bottom: 15px;
+    }
+    .footer-bottom {
+        margin-top: 40px;
+        padding-top: 18px;
+    }
+}
+
+@media (max-width: 400px) {
+    .nombre-empresa span {
+        font-size: 9px;
+    }
+    .nombre-empresa strong {
+        font-size: 14px;
+    }
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+    .menu-btn {
+        width: 40px;
+    }
+    .menu-btn span:nth-child(1),
+    .menu-btn span:nth-child(3) {
+        width: 26px;
+    }
+    .menu-btn span:nth-child(2) {
+        width: 19px;
+    }
+    .hero {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+    .hero h1 {
+        font-size: 36px;
+    }
+    .hero-descripcion {
+        font-size: 13px;
+    }
+    .btn-principal,
+    .btn-secundario {
+        width: 100%;
+        justify-content: center;
+    }
+    .seccion {
+        padding: 60px 0;
+    }
+    h2 {
+        font-size: 29px;
+    }
+    .carrusel-nosotros img {
+        height: 220px;
+    }
+    .servicio-imagen {
+        height: 200px;
+    }
+    .servicio-contenido {
+        padding: 22px;
+    }
+    .menu-lateral {
+        padding: 22px;
+    }
+}

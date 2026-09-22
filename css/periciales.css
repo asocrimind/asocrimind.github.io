@@ -1,0 +1,879 @@
+:root {
+    --verde: #1d3b36;
+    --verde-oscuro: #17201e;
+    --dorado: #b49a63;
+    --crema: #f5f4f0;
+    --blanco: #ffffff;
+    --gris: #686d6a;
+    --borde: #deddd7;
+    --transicion: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--verde-oscuro);
+    background: var(--blanco);
+}
+
+.contenedor {
+    width: 86%;
+    max-width: 1250px;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.navbar-inicio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0;
+    background: transparent;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--blanco) !important;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.nombre-empresa {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+}
+
+.nombre-empresa span {
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.nombre-empresa strong {
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: var(--verde-oscuro);
+}
+
+.menu-btn {
+    width: 48px;
+    height: 48px;
+    border: none;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.menu-btn span {
+    display: block;
+    height: 2px;
+    background: var(--verde-oscuro);
+    transition: var(--transicion);
+}
+
+.menu-btn span:nth-child(1) {
+    width: 30px;
+}
+
+.menu-btn span:nth-child(2) {
+    width: 22px;
+}
+
+.menu-btn span:nth-child(3) {
+    width: 30px;
+}
+
+.menu-btn:hover span:nth-child(2) {
+    width: 30px;
+}
+
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 330px;
+    height: 100vh;
+    background: var(--blanco);
+    z-index: 2000;
+    padding: 30px;
+    transition: var(--transicion);
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.15);
+}
+
+.menu-lateral.activo {
+    right: 0;
+}
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1500;
+    transition: var(--transicion);
+}
+
+.menu-overlay.activo {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu-header h3 {
+    color: var(--verde);
+    margin: 0;
+}
+
+.menu-header button {
+    background: none;
+    border: none;
+    font-size: 25px;
+    color: var(--verde);
+    cursor: pointer;
+}
+
+.menu-lista {
+    list-style: none;
+    padding: 30px 0;
+}
+
+.menu-lista li {
+    margin-bottom: 10px;
+}
+
+.menu-lista a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 14px;
+    color: var(--verde-oscuro);
+    border-radius: 6px;
+    transition: var(--transicion);
+}
+
+.menu-lista a i {
+    width: 20px;
+    color: var(--dorado);
+}
+
+.menu-lista a:hover {
+    background: var(--crema);
+    padding-left: 20px;
+}
+
+.encabezado-servicios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 320px;
+    background: var(--crema);
+    border-bottom: 1px solid var(--borde);
+}
+
+.encabezado-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 85px 8% 25px;
+}
+
+.etiqueta {
+    color: var(--dorado);
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.encabezado-texto h1 {
+    color: var(--verde);
+    font-size: 38px;
+    line-height: 1.15;
+    font-weight: 500;
+    max-width: 540px;
+    margin-bottom: 12px;
+}
+
+.encabezado-texto p {
+    color: var(--gris);
+    font-size: 13px;
+    line-height: 1.7;
+    max-width: 500px;
+}
+
+.encabezado-imagen {
+    height: 320px;
+    overflow: hidden;
+}
+
+.encabezado-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.introduccion {
+    padding: 90px 0 65px;
+}
+
+.introduccion h2 {
+    color: var(--verde);
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 500;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.introduccion p {
+    color: var(--gris);
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 650px;
+}
+
+.categorias {
+    padding-bottom: 100px;
+}
+
+.categoria {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 480px;
+    margin-bottom: 80px;
+    background: var(--crema);
+}
+
+.categoria-info {
+    padding: 60px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.categoria-imagen {
+    height: 480px;
+    overflow: hidden;
+}
+
+.categoria-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.categoria-invertida .categoria-info {
+    order: 2;
+}
+
+.categoria-invertida .categoria-imagen {
+    order: 1;
+}
+
+.categoria-icono {
+    width: 52px;
+    height: 52px;
+    border: 1px solid var(--dorado);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dorado);
+    font-size: 18px;
+    margin-bottom: 22px;
+}
+
+.numero-categoria {
+    color: var(--dorado);
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.categoria h2 {
+    color: var(--verde);
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 14px;
+}
+
+.frase {
+    color: var(--gris);
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.7;
+    max-width: 480px;
+    margin-bottom: 25px;
+}
+
+.lista-servicios {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.lista-servicios div {
+    color: var(--verde);
+    font-size: 12px;
+}
+
+.lista-servicios i {
+    color: var(--dorado);
+    margin-right: 8px;
+    font-size: 9px;
+}
+
+.catalogo-pdf {
+    background: var(--verde);
+    padding: 70px 0;
+    color: white;
+}
+
+.pdf-contenido {
+    display: grid;
+    grid-template-columns: 70px 1fr auto;
+    gap: 30px;
+    align-items: center;
+}
+
+.pdf-icono {
+    width: 55px;
+    height: 55px;
+    border: 1px solid var(--dorado);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dorado);
+    font-size: 20px;
+}
+
+.pdf-contenido h2 {
+    font-size: 27px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.pdf-contenido p {
+    color: #cbd0ce;
+    font-size: 12px;
+    line-height: 1.7;
+    max-width: 650px;
+    margin: 0;
+}
+
+.btn-pdf {
+    background: var(--crema);
+    color: var(--verde);
+    text-decoration: none;
+    padding: 13px 20px;
+    font-size: 11px;
+    white-space: nowrap;
+    transition: .3s;
+}
+
+.btn-pdf:hover {
+    background: var(--dorado);
+    color: white;
+}
+
+.footer {
+    padding: 70px 0 70px;
+    background: var(--verde-oscuro);
+    color: #d7ddda;
+}
+
+.footer-marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.footer-marca img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.footer-marca div {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-marca strong {
+    color: var(--blanco);
+    letter-spacing: 2px;
+}
+
+.footer-marca span {
+    font-size: 12px;
+}
+
+.footer-descripcion {
+    max-width: 350px;
+    line-height: 1.7;
+}
+
+.footer h4 {
+    color: var(--blanco);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.redes {
+    display: flex;
+    gap: 10px;
+}
+
+.redes a {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #59625f;
+    border-radius: 50%;
+}
+
+.redes a:hover {
+    border-color: var(--dorado);
+}
+
+.footer-bottom {
+    margin-top: 60px;
+    padding: 20px 0;
+    border-top: 1px solid #3941;
+}
+
+@media (max-width: 991px) {
+    .navbar-inicio {
+        padding: 18px 0;
+    }
+
+    .logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .nombre-empresa span {
+        font-size: 11px;
+    }
+
+    .nombre-empresa strong {
+        font-size: 17px;
+    }
+
+    .menu-lateral {
+        width: 300px;
+        right: -320px;
+        padding: 25px;
+    }
+
+    .encabezado-servicios {
+        height: 290px;
+    }
+
+    .encabezado-texto {
+        padding: 80px 7% 30px;
+    }
+
+    .encabezado-texto h1 {
+        font-size: 32px;
+    }
+
+    .encabezado-texto p {
+        font-size: 12px;
+    }
+
+    .encabezado-imagen {
+        height: 290px;
+    }
+
+    .introduccion {
+        padding: 75px 0 55px;
+    }
+
+    .introduccion h2 {
+        font-size: 32px;
+    }
+
+    .introduccion p {
+        font-size: 13px;
+    }
+
+    .categorias {
+        padding-bottom: 70px;
+    }
+
+    .categoria {
+        min-height: 400px;
+        margin-bottom: 60px;
+    }
+
+    .categoria-info {
+        padding: 45px 45px;
+    }
+
+    .categoria-imagen {
+        height: 400px;
+    }
+
+    .categoria h2 {
+        font-size: 27px;
+    }
+
+    .frase {
+        font-size: 13px;
+    }
+
+    .catalogo-pdf {
+        padding: 60px 0;
+    }
+
+    .pdf-contenido {
+        grid-template-columns: 60px 1fr auto;
+        gap: 22px;
+    }
+
+    .pdf-contenido h2 {
+        font-size: 24px;
+    }
+
+    .footer {
+        padding: 60px 0;
+    }
+
+    .footer-bottom {
+        margin-top: 45px;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-inicio {
+        padding: 15px 0;
+    }
+
+    .marca {
+        gap: 8px;
+    }
+
+    .logo {
+        width: 42px;
+        height: 42px;
+    }
+
+    .nombre-empresa span {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+
+    .nombre-empresa strong {
+        font-size: 15px;
+        letter-spacing: 1.5px;
+    }
+
+    .menu-btn {
+        width: 42px;
+        height: 42px;
+    }
+
+    .menu-btn span:nth-child(1),
+    .menu-btn span:nth-child(3) {
+        width: 26px;
+    }
+
+    .menu-btn span:nth-child(2) {
+        width: 19px;
+    }
+
+    .menu-lateral {
+        width: 290px;
+        right: -310px;
+        padding: 25px;
+    }
+
+    .menu-header {
+        padding-bottom: 20px;
+    }
+
+    .menu-header h3 {
+        font-size: 18px;
+    }
+
+    .menu-lista {
+        padding: 25px 0;
+    }
+
+    .menu-lista a {
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    .encabezado-servicios {
+        height: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .encabezado-texto {
+        padding: 105px 25px 35px;
+    }
+
+    .encabezado-texto h1 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .encabezado-texto p {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .encabezado-imagen {
+        height: 220px;
+    }
+
+    .introduccion {
+        padding: 60px 0 45px;
+    }
+
+    .introduccion h2 {
+        font-size: 29px;
+        line-height: 1.25;
+    }
+
+    .introduccion p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    .categorias {
+        padding-bottom: 45px;
+    }
+
+    .categoria {
+        display: flex;
+        flex-direction: column;
+        min-height: auto;
+        margin-bottom: 45px;
+    }
+
+    .categoria-info,
+    .categoria-invertida .categoria-info {
+        order: 2;
+        padding: 40px 25px 45px;
+    }
+
+    .categoria-imagen,
+    .categoria-invertida .categoria-imagen {
+        order: 1;
+        height: 230px;
+    }
+
+    .categoria-icono {
+        width: 48px;
+        height: 48px;
+        font-size: 16px;
+        margin-bottom: 18px;
+    }
+
+    .numero-categoria {
+        font-size: 9px;
+    }
+
+    .categoria h2 {
+        font-size: 26px;
+        line-height: 1.2;
+        margin-bottom: 12px;
+    }
+
+    .frase {
+        font-size: 12px;
+        line-height: 1.7;
+        margin-bottom: 22px;
+    }
+
+    .lista-servicios {
+        gap: 10px;
+    }
+
+    .lista-servicios div {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .catalogo-pdf {
+        padding: 50px 0;
+    }
+
+    .pdf-contenido {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .pdf-icono {
+        width: 50px;
+        height: 50px;
+    }
+
+    .pdf-contenido h2 {
+        font-size: 24px;
+        line-height: 1.25;
+    }
+
+    .pdf-contenido p {
+        font-size: 11px;
+        line-height: 1.7;
+    }
+
+    .btn-pdf {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 18px;
+    }
+
+    .footer {
+        padding: 50px 20px;
+    }
+
+    .footer-marca {
+        margin-bottom: 15px;
+    }
+
+    .footer-marca img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .footer-descripcion {
+        max-width: 100%;
+        font-size: 12px;
+    }
+
+    .footer h4 {
+        font-size: 15px;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+
+    .redes a {
+        width: 38px;
+        height: 38px;
+    }
+
+    .footer-bottom {
+        margin-top: 40px;
+        padding-top: 18px;
+    }
+
+    .footer-bottom p {
+        font-size: 10px;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 400px) {
+    .logo {
+        width: 38px;
+        height: 38px;
+    }
+
+    .nombre-empresa span {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .nombre-empresa strong {
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+
+    .menu-lateral {
+        width: 270px;
+    }
+
+    .encabezado-texto {
+        padding: 100px 20px 30px;
+    }
+
+    .encabezado-texto h1 {
+        font-size: 27px;
+    }
+
+    .encabezado-imagen {
+        height: 200px;
+    }
+
+    .introduccion h2 {
+        font-size: 26px;
+    }
+
+    .categoria-info,
+    .categoria-invertida .categoria-info {
+        padding: 35px 20px 40px;
+    }
+
+    .categoria-imagen,
+    .categoria-invertida .categoria-imagen {
+        height: 200px;
+    }
+
+    .categoria h2 {
+        font-size: 24px;
+    }
+
+    .pdf-contenido h2 {
+        font-size: 22px;
+    }
+
+    .btn-pdf {
+        width: 100%;
+    }
+}

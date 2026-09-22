@@ -1,0 +1,831 @@
+:root {
+    --verde: #1d3b36;
+    --verde-oscuro: #17201e;
+    --dorado: #b49a63;
+    --crema: #f5f4f0;
+    --blanco: #ffffff;
+    --gris: #686d6a;
+    --borde: #deddd7;
+    --transicion: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--verde-oscuro);
+    background: var(--blanco);
+}
+
+.contenedor {
+    width: 86%;
+    max-width: 1250px;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.navbar-inicio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0;
+    background: transparent;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--blanco) !important;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.nombre-empresa {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+}
+
+.nombre-empresa span {
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.nombre-empresa strong {
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: var(--verde-oscuro);
+}
+
+.menu-btn {
+    width: 48px;
+    height: 48px;
+    border: none;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.menu-btn span {
+    display: block;
+    height: 2px;
+    background: var(--verde-oscuro);
+    transition: var(--transicion);
+}
+
+.menu-btn span:nth-child(1) {
+    width: 30px;
+}
+
+.menu-btn span:nth-child(2) {
+    width: 22px;
+}
+
+.menu-btn span:nth-child(3) {
+    width: 30px;
+}
+
+.menu-btn:hover span:nth-child(2) {
+    width: 30px;
+}
+
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 330px;
+    height: 100vh;
+    background: var(--blanco);
+    z-index: 2000;
+    padding: 30px;
+    transition: var(--transicion);
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.15);
+}
+
+.menu-lateral.activo {
+    right: 0;
+}
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1500;
+    transition: var(--transicion);
+}
+
+.menu-overlay.activo {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu-header h3 {
+    color: var(--verde);
+    margin: 0;
+}
+
+.menu-header button {
+    background: none;
+    border: none;
+    font-size: 25px;
+    color: var(--verde);
+    cursor: pointer;
+}
+
+.menu-lista {
+    list-style: none;
+    padding: 30px 0;
+}
+
+.menu-lista li {
+    margin-bottom: 10px;
+}
+
+.menu-lista a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 14px;
+    color: var(--verde-oscuro);
+    border-radius: 6px;
+    transition: var(--transicion);
+}
+
+.menu-lista a i {
+    width: 20px;
+    color: var(--dorado);
+}
+
+.menu-lista a:hover {
+    background: var(--crema);
+    padding-left: 20px;
+}
+
+.encabezado-servicios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 320px;
+    background: var(--crema);
+    border-bottom: 1px solid var(--borde);
+}
+
+.encabezado-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 85px 8% 25px;
+}
+
+.etiqueta {
+    display: block;
+    color: var(--dorado);
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.encabezado-texto h1 {
+    color: var(--verde);
+    font-size: 38px;
+    line-height: 1.15;
+    font-weight: 500;
+    margin-bottom: 12px;
+    max-width: 550px;
+}
+
+.encabezado-texto p {
+    color: var(--gris);
+    font-size: 13px;
+    line-height: 1.7;
+    max-width: 500px;
+}
+
+.encabezado-imagen {
+    height: 320px;
+    overflow: hidden;
+}
+
+.encabezado-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.servicio-principal {
+    padding: 100px 0;
+}
+
+.servicio-introduccion {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 40px;
+    max-width: 1000px;
+}
+
+.servicio-introduccion h2 {
+    color: var(--verde);
+    font-size: 38px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.servicio-introduccion p {
+    color: var(--gris);
+    font-size: 14px;
+    line-height: 1.9;
+    max-width: 800px;
+    margin-bottom: 15px;
+}
+
+.proceso {
+    background: var(--crema);
+    padding: 100px 0;
+}
+
+.titulo-seccion {
+    max-width: 650px;
+    margin-bottom: 65px;
+}
+
+.titulo-seccion h2 {
+    color: var(--verde);
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+
+.titulo-seccion p {
+    color: var(--gris);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.pasos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 45px 35px;
+}
+
+.paso {
+    position: relative;
+}
+
+.icono-paso {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--dorado);
+    border-radius: 50%;
+    color: var(--dorado);
+    margin-bottom: 18px;
+}
+
+.paso > span {
+    color: var(--dorado);
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.paso h3 {
+    color: var(--verde);
+    font-size: 17px;
+    font-weight: 500;
+    margin: 6px 0 10px;
+}
+
+.paso p {
+    color: var(--gris);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.ofrecemos {
+    padding: 110px 0;
+}
+
+.ofrecemos-grid {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.ofrecemos-texto h2 {
+    color: var(--verde);
+    font-size: 38px;
+    line-height: 1.2;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.ofrecemos-texto p {
+    color: var(--gris);
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 15px;
+}
+
+.graficas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+}
+
+.grafica {
+    text-align: center;
+}
+
+.grafica-contenedor {
+    width: 210px;
+    height: 210px;
+    margin: 0 auto 25px;
+}
+
+.grafica h3 {
+    color: var(--verde);
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.footer {
+    padding: 70px 0 70px;
+    background: var(--verde-oscuro);
+    color: #d7ddda;
+}
+
+.footer-marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.footer-marca img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.footer-marca div {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-marca strong {
+    color: var(--blanco);
+    letter-spacing: 2px;
+}
+
+.footer-marca span {
+    font-size: 12px;
+}
+
+.footer-descripcion {
+    max-width: 350px;
+    line-height: 1.7;
+}
+
+.footer h4 {
+    color: var(--blanco);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.redes {
+    display: flex;
+    gap: 10px;
+}
+
+.redes a {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #59625f;
+    border-radius: 50%;
+}
+
+.redes a:hover {
+    border-color: var(--dorado);
+}
+
+.footer-bottom {
+    margin-top: 60px;
+    padding: 20px 0;
+    border-top: 1px solid #3941;
+}
+
+@media (max-width: 991px) {
+
+    .contenedor {
+        width: 90%;
+    }
+
+    .navbar-inicio {
+        padding: 18px 0;
+    }
+
+    .logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .nombre-empresa span {
+        font-size: 11px;
+    }
+
+    .nombre-empresa strong {
+        font-size: 17px;
+    }
+
+    .encabezado-servicios {
+        height: 280px;
+    }
+
+    .encabezado-texto {
+        padding: 80px 8% 25px;
+    }
+
+    .encabezado-texto h1 {
+        font-size: 32px;
+    }
+
+    .encabezado-texto p {
+        font-size: 12px;
+    }
+
+    .encabezado-imagen {
+        height: 280px;
+    }
+
+    .servicio-principal {
+        padding: 80px 0;
+    }
+
+    .servicio-introduccion {
+        grid-template-columns: 70px 1fr;
+        gap: 30px;
+    }
+
+    .servicio-introduccion h2 {
+        font-size: 32px;
+    }
+
+    .servicio-introduccion p {
+        font-size: 13px;
+    }
+
+    .proceso {
+        padding: 80px 0;
+    }
+
+    .titulo-seccion {
+        margin-bottom: 50px;
+    }
+
+    .titulo-seccion h2 {
+        font-size: 32px;
+    }
+
+    .pasos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 45px 40px;
+    }
+
+    .ofrecemos {
+        padding: 85px 0;
+    }
+
+    .ofrecemos-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .ofrecemos-texto h2 {
+        font-size: 32px;
+    }
+
+    .graficas {
+        gap: 30px;
+    }
+
+    .footer {
+        padding: 60px 0;
+    }
+
+    .footer-bottom {
+        margin-top: 45px;
+    }
+}
+
+@media (max-width: 767px) {
+    .contenedor {
+        width: 90%;
+    }
+
+    .navbar-inicio {
+        padding: 15px 0;
+    }
+
+    .marca {
+        gap: 8px;
+    }
+
+    .logo {
+        width: 42px;
+        height: 42px;
+    }
+
+    .nombre-empresa span {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+
+    .nombre-empresa strong {
+        font-size: 15px;
+        letter-spacing: 1.5px;
+    }
+
+    .menu-btn {
+        width: 42px;
+        height: 42px;
+    }
+
+    .menu-btn span:nth-child(1) {
+        width: 26px;
+    }
+
+    .menu-btn span:nth-child(2) {
+        width: 19px;
+    }
+
+    .menu-btn span:nth-child(3) {
+        width: 26px;
+    }
+
+    .menu-lateral {
+        width: 290px;
+        right: -310px;
+        padding: 25px;
+    }
+
+    .menu-header {
+        padding-bottom: 20px;
+    }
+
+    .menu-header h3 {
+        font-size: 18px;
+    }
+
+    .menu-lista {
+        padding: 25px 0;
+    }
+
+    .menu-lista a {
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    .encabezado-servicios {
+        height: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .encabezado-texto {
+        padding: 105px 25px 40px;
+    }
+
+    .encabezado-texto h1 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .encabezado-texto p {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .encabezado-imagen {
+        height: 220px;
+    }
+
+    .servicio-principal {
+        padding: 65px 0;
+    }
+
+    .servicio-introduccion {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .servicio-introduccion h2 {
+        font-size: 29px;
+        margin-bottom: 20px;
+    }
+
+    .servicio-introduccion p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    .proceso {
+        padding: 65px 0;
+    }
+
+    .titulo-seccion {
+        margin-bottom: 45px;
+    }
+
+    .titulo-seccion h2 {
+        font-size: 29px;
+    }
+
+    .titulo-seccion p {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .pasos {
+        grid-template-columns: 1fr;
+        gap: 38px;
+    }
+
+    .icono-paso {
+        width: 42px;
+        height: 42px;
+        margin-bottom: 15px;
+    }
+
+    .paso h3 {
+        font-size: 16px;
+    }
+
+    .paso p {
+        font-size: 12px;
+    }
+
+    .ofrecemos {
+        padding: 65px 0;
+    }
+
+    .ofrecemos-grid {
+        gap: 50px;
+    }
+
+    .ofrecemos-texto h2 {
+        font-size: 29px;
+    }
+
+    .ofrecemos-texto p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    .graficas {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .grafica-contenedor {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 18px;
+    }
+
+    .grafica h3 {
+        font-size: 14px;
+    }
+
+    .footer {
+        padding: 50px 20px;
+    }
+
+    .footer-marca {
+        margin-bottom: 15px;
+    }
+
+    .footer-marca img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .footer-descripcion {
+        font-size: 12px;
+        max-width: 100%;
+    }
+
+    .footer h4 {
+        font-size: 15px;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+
+    .redes a {
+        width: 38px;
+        height: 38px;
+    }
+
+    .footer-bottom {
+        margin-top: 40px;
+        padding-top: 18px;
+    }
+
+    .footer-bottom p {
+        font-size: 10px;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 400px) {
+    .nombre-empresa span {
+        font-size: 8px;
+    }
+
+    .nombre-empresa strong {
+        font-size: 13px;
+    }
+
+    .logo {
+        width: 38px;
+        height: 38px;
+    }
+
+    .menu-lateral {
+        width: 270px;
+    }
+
+    .encabezado-texto {
+        padding: 100px 20px 35px;
+    }
+
+    .encabezado-texto h1 {
+        font-size: 27px;
+    }
+
+    .servicio-introduccion h2,
+    .titulo-seccion h2,
+    .ofrecemos-texto h2 {
+        font-size: 26px;
+    }
+
+    .graficas {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .grafica-contenedor {
+        width: 180px;
+        height: 180px;
+    }
+}

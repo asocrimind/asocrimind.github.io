@@ -1,0 +1,871 @@
+:root {
+    --verde: #1d3b36;
+    --verde-oscuro: #17201e;
+    --dorado: #b49a63;
+    --crema: #f5f4f0;
+    --blanco: #ffffff;
+    --texto: #4b5552;
+    --transicion: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    color: var(--texto);
+    background: var(--blanco);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.navbar-inicio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--verde) !important;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.nombre-empresa {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+}
+
+.nombre-empresa span {
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.nombre-empresa strong {
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.menu-btn {
+    width: 48px;
+    height: 48px;
+    border: none;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.menu-btn span {
+    height: 2px;
+    background: var(--verde);
+    transition: var(--transicion);
+}
+
+.menu-btn span:nth-child(1),
+.menu-btn span:nth-child(3) {
+    width: 30px;
+}
+
+.menu-btn span:nth-child(2) {
+    width: 22px;
+}
+
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 330px;
+    height: 100vh;
+    padding: 30px;
+    background: var(--blanco);
+    z-index: 2000;
+    transition: var(--transicion);
+    box-shadow: -10px 0 40px rgba(0,0,0,.15);
+}
+
+.menu-lateral.activo {
+    right: 0;
+}
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1500;
+    transition: var(--transicion);
+}
+
+.menu-overlay.activo {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu-header h3 {
+    color: var(--verde);
+}
+
+.menu-header button {
+    border: none;
+    background: transparent;
+    font-size: 25px;
+    color: var(--verde);
+    cursor: pointer;
+}
+
+.menu-lista {
+    list-style: none;
+    padding: 30px 0;
+}
+
+.menu-lista li {
+    margin-bottom: 10px;
+}
+
+.menu-lista a {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 14px;
+    color: var(--verde-oscuro);
+    transition: var(--transicion);
+}
+
+.menu-lista a i {
+    width: 20px;
+    color: var(--dorado);
+}
+
+.menu-lista a:hover {
+    background: var(--crema);
+    padding-left: 20px;
+}
+
+.encabezado {
+    width: 100%;
+    height: 320px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--crema);
+    border-bottom: 1px solid #e3e1da;
+}
+
+.encabezado-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px 8% 30px;
+}
+
+.encabezado-texto .etiqueta {
+    margin-bottom: 10px;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.encabezado-texto h1 {
+    color: var(--verde);
+    font-size: 38px;
+    line-height: 1.1;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.encabezado-texto p {
+    max-width: 450px;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.encabezado-imagen {
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+}
+
+.encabezado-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.imagen-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.perfiles {
+    background: var(--blanco);
+}
+
+.perfil {
+    padding: 110px 0;
+    border-bottom: 1px solid #e6e4df;
+}
+
+.perfil-grid {
+    display: grid;
+    grid-template-columns: 42% 58%;
+    align-items: center;
+    min-height: 600px;
+}
+
+.perfil-imagen {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+}
+
+.perfil-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(15%);
+}
+
+.perfil-info {
+    padding: 20px 0 20px 70px;
+}
+
+.perfil-identidad {
+    margin-bottom: 30px;
+}
+
+.profesion {
+    color: var(--dorado);
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.perfil-identidad h2 {
+    margin: 8px 0 14px;
+    color: var(--verde);
+    font-size: clamp(32px, 4vw, 50px);
+    font-weight: 500;
+}
+
+.origen {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 15px;
+    background: var(--verde);
+    color: var(--blanco);
+    font-size: 13px;
+    letter-spacing: .5px;
+}
+
+.origen i {
+    color: var(--dorado);
+}
+
+.datos-contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    padding: 20px 0;
+    border-top: 1px solid #dedcd6;
+    border-bottom: 1px solid #dedcd6;
+    margin-bottom: 30px;
+}
+
+.datos-contacto span {
+    display: block;
+    color: #858b88;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 5px;
+}
+
+.datos-contacto span i {
+    color: var(--dorado);
+    margin-right: 6px;
+}
+
+.datos-contacto p {
+    margin: 0;
+    color: var(--verde);
+    font-size: 14px;
+}
+
+.bloques-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+
+.titulo-bloque {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--verde);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.titulo-bloque::before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 2px;
+    background: var(--dorado);
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.bloque p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.reseña-corta {
+    margin-top: 30px;
+    padding-left: 20px;
+    border-left: 2px solid var(--dorado);
+}
+
+.reseña-corta p {
+    font-size: 14px;
+    line-height: 1.8;
+    font-style: italic;
+    margin: 0;
+}
+
+.acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.btn-perfil {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border: 1px solid var(--verde);
+    color: var(--verde);
+    font-size: 13px;
+    transition: var(--transicion);
+}
+
+.btn-perfil:hover {
+    background: var(--verde);
+    color: var(--blanco);
+}
+
+.btn-perfil.principal {
+    background: var(--verde);
+    color: var(--blanco);
+}
+
+.btn-perfil.principal:hover {
+    background: transparent;
+    color: var(--verde);
+}
+
+.perfil-invertido {
+    background: var(--crema);
+}
+
+.perfil-invertido .perfil-grid {
+    grid-template-columns: 58% 42%;
+}
+
+.perfil-invertido .perfil-imagen {
+    order: 2;
+}
+
+.perfil-invertido .perfil-info {
+    order: 1;
+    padding-left: 0;
+    padding-right: 70px;
+}
+
+.footer {
+    padding: 70px 0 70px;
+    background: var(--verde-oscuro);
+    color: #d7ddda;
+}
+
+.footer-marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.footer-marca img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.footer-marca div {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-marca strong {
+    color: var(--blanco);
+    letter-spacing: 2px;
+}
+
+.footer-marca span {
+    font-size: 12px;
+}
+
+.footer-descripcion {
+    max-width: 350px;
+    line-height: 1.7;
+}
+
+.footer h4 {
+    color: var(--blanco);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.redes {
+    display: flex;
+    gap: 10px;
+}
+
+.redes a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #59625f;
+    border-radius: 50%;
+}
+
+.footer-bottom {
+    margin-top: 60px;
+    padding: 20px 0;
+    border-top: 1px solid #39413f;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 12px;
+    color: #929b97;
+}
+
+@media (max-width: 991px) {
+    .navbar-inicio {
+        padding: 18px 0;
+    }
+
+    .logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .nombre-empresa span {
+        font-size: 11px;
+    }
+
+    .nombre-empresa strong {
+        font-size: 17px;
+    }
+
+    .menu-lateral {
+        width: 300px;
+        right: -320px;
+        padding: 25px;
+    }
+
+    .encabezado {
+        height: 290px;
+    }
+
+    .encabezado-texto {
+        padding: 80px 7% 30px;
+    }
+
+    .encabezado-texto h1 {
+        font-size: 32px;
+    }
+
+    .encabezado-texto p {
+        font-size: 12px;
+    }
+
+    .encabezado-imagen {
+        height: 290px;
+    }
+
+    .perfil {
+        padding: 80px 0;
+    }
+
+    .perfil-grid {
+        grid-template-columns: 40% 60%;
+        min-height: 500px;
+    }
+
+    .perfil-imagen {
+        height: 500px;
+    }
+
+    .perfil-info {
+        padding-left: 45px;
+    }
+
+    .perfil-invertido .perfil-info {
+        padding-right: 45px;
+    }
+
+    .perfil-identidad h2 {
+        font-size: 40px;
+    }
+
+    .datos-contacto {
+        gap: 18px;
+    }
+
+    .bloques-info {
+        gap: 25px;
+    }
+
+    .bloque p,
+    .reseña-corta p {
+        font-size: 13px;
+    }
+
+    .footer {
+        padding: 60px 0;
+    }
+
+    .footer-bottom {
+        margin-top: 45px;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-inicio {
+        padding: 15px 0;
+    }
+
+    .marca {
+        gap: 8px;
+    }
+
+    .logo {
+        width: 42px;
+        height: 42px;
+    }
+
+    .nombre-empresa span {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+
+    .nombre-empresa strong {
+        font-size: 15px;
+        letter-spacing: 1.5px;
+    }
+
+    .menu-btn {
+        width: 42px;
+        height: 42px;
+    }
+
+    .menu-btn span:nth-child(1),
+    .menu-btn span:nth-child(3) {
+        width: 26px;
+    }
+
+    .menu-btn span:nth-child(2) {
+        width: 19px;
+    }
+
+    .menu-lateral {
+        width: 290px;
+        right: -310px;
+        padding: 25px;
+    }
+
+    .menu-header {
+        padding-bottom: 20px;
+    }
+
+    .menu-header h3 {
+        font-size: 18px;
+    }
+
+    .menu-lista {
+        padding: 25px 0;
+    }
+
+    .menu-lista a {
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    .encabezado {
+        height: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .encabezado-texto {
+        padding: 105px 25px 35px;
+    }
+
+    .encabezado-texto h1 {
+        font-size: 30px;
+        line-height: 1.15;
+    }
+
+    .encabezado-texto p {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .encabezado-imagen {
+        height: 220px;
+    }
+
+    .perfil {
+        padding: 60px 0;
+    }
+
+    .perfil-grid,
+    .perfil-invertido .perfil-grid {
+        display: flex;
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .perfil-imagen,
+    .perfil-invertido .perfil-imagen {
+        order: 1;
+        width: 100%;
+        height: 380px;
+    }
+
+    .perfil-info,
+    .perfil-invertido .perfil-info {
+        order: 2;
+        width: 100%;
+        padding: 40px 0 0;
+    }
+
+    .perfil-identidad {
+        margin-bottom: 25px;
+    }
+
+    .profesion {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .perfil-identidad h2 {
+        font-size: 34px;
+        line-height: 1.15;
+        margin: 8px 0 14px;
+    }
+
+    .origen {
+        font-size: 12px;
+        padding: 7px 12px;
+    }
+
+    .datos-contacto {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 20px 0;
+        margin-bottom: 25px;
+    }
+
+    .datos-contacto span {
+        font-size: 10px;
+    }
+
+    .datos-contacto p {
+        font-size: 13px;
+    }
+
+    .bloques-info {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .titulo-bloque {
+        font-size: 14px;
+    }
+
+    .bloque p {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .reseña-corta {
+        margin-top: 25px;
+        padding-left: 15px;
+    }
+
+    .reseña-corta p {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .acciones {
+        margin-top: 25px;
+        gap: 10px;
+    }
+
+    .btn-perfil {
+        padding: 11px 17px;
+        font-size: 12px;
+    }
+
+    .footer {
+        padding: 50px 20px;
+    }
+
+    .footer-marca {
+        margin-bottom: 15px;
+    }
+
+    .footer-marca img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .footer-descripcion {
+        max-width: 100%;
+        font-size: 12px;
+    }
+
+    .footer h4 {
+        font-size: 15px;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+
+    .redes a {
+        width: 38px;
+        height: 38px;
+    }
+
+    .footer-bottom {
+        margin-top: 40px;
+        padding-top: 18px;
+    }
+
+    .footer-bottom p {
+        font-size: 10px;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 400px) {
+    .logo {
+        width: 38px;
+        height: 38px;
+    }
+
+    .nombre-empresa span {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .nombre-empresa strong {
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+
+    .menu-lateral {
+        width: 270px;
+    }
+
+    .encabezado-texto {
+        padding: 100px 20px 30px;
+    }
+
+    .encabezado-texto h1 {
+        font-size: 27px;
+    }
+
+    .encabezado-imagen {
+        height: 200px;
+    }
+
+    .perfil {
+        padding: 50px 0;
+    }
+
+    .perfil-imagen,
+    .perfil-invertido .perfil-imagen {
+        height: 320px;
+    }
+
+    .perfil-info,
+    .perfil-invertido .perfil-info {
+        padding-top: 30px;
+    }
+
+    .perfil-identidad h2 {
+        font-size: 29px;
+    }
+
+    .origen {
+        font-size: 11px;
+    }
+
+    .btn-perfil {
+        width: 100%;
+        justify-content: center;
+    }
+}

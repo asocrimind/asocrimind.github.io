@@ -1,0 +1,366 @@
+:root {
+    --color-principal: #1d3b36;
+    --color-secundario: #b49a63;
+    --color-claro: #f5f4f0;
+    --color-oscuro: #17201e;
+    --color-texto: #4b5552;
+    --blanco: #ffffff;
+    --transicion: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    color: var(--color-texto);
+    background: var(--blanco);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.navbar-inicio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0;
+    background: transparent;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--blanco) !important;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.nombre-empresa {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+    color: var(--color-oscuro);
+}
+
+.nombre-empresa span {
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.nombre-empresa strong {
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.menu-btn {
+    width: 48px;
+    height: 48px;
+    border: none;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.menu-btn span {
+    display: block;
+    height: 2px;
+    background: var(--color-oscuro);
+    transition: var(--transicion);
+}
+
+.menu-btn span:nth-child(1) {
+    width: 30px;
+}
+
+.menu-btn span:nth-child(2) {
+    width: 22px;
+}
+
+.menu-btn span:nth-child(3) {
+    width: 30px;
+}
+
+.menu-btn:hover span:nth-child(2) {
+    width: 30px;
+}
+
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 330px;
+    height: 100vh;
+    background: var(--blanco);
+    z-index: 2000;
+    padding: 30px;
+    transition: var(--transicion);
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.15);
+}
+
+.menu-lateral.activo {
+    right: 0;
+}
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1500;
+    transition: var(--transicion);
+}
+
+.menu-overlay.activo {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu-header h3 {
+    color: var(--color-principal);
+    margin: 0;
+}
+
+.menu-header button {
+    background: none;
+    border: none;
+    font-size: 25px;
+    color: var(--color-principal);
+    cursor: pointer;
+}
+
+.menu-lista {
+    list-style: none;
+    padding: 30px 0;
+}
+
+.menu-lista li {
+    margin-bottom: 10px;
+}
+
+.menu-lista a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 14px;
+    color: var(--color-oscuro);
+    border-radius: 6px;
+    transition: var(--transicion);
+}
+
+.menu-lista a i {
+    width: 20px;
+    color: var(--color-secundario);
+}
+
+.menu-lista a:hover {
+    background: var(--color-claro);
+    padding-left: 20px;
+}
+
+.boton-todos {
+    margin-top: 50px;
+}
+
+.footer {
+    padding: 70px 0 70px;
+    background: var(--color-oscuro);
+    color: #d7ddda;
+}
+
+.footer-marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.footer-marca img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.footer-marca div {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-marca strong {
+    color: var(--blanco);
+    letter-spacing: 2px;
+}
+
+.footer-marca span {
+    font-size: 12px;
+}
+
+.footer-descripcion {
+    max-width: 350px;
+    line-height: 1.7;
+}
+
+.footer h4 {
+    color: var(--blanco);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.redes {
+    display: flex;
+    gap: 10px;
+}
+
+.redes a {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #59625f;
+    border-radius: 50%;
+}
+
+.redes a:hover {
+    border-color: var(--color-secundario);
+}
+
+.footer-bottom {
+    margin-top: 60px;
+    padding: 20px 0;
+    border-top: 1px solid #3941;
+}
+
+.logos-seccion {
+    background: var(--crema);
+    padding: 90px 0 100px;
+}
+
+.logos-encabezado {
+    max-width: 650px;
+    margin-bottom: 55px;
+}
+
+.logos-encabezado .etiqueta {
+    display: block;
+    color: var(--dorado);
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.logos-encabezado h1 {
+    color: var(--verde);
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 14px;
+}
+
+.logos-encabezado p {
+    color: var(--gris);
+    font-size: 13px;
+    line-height: 1.7;
+    max-width: 550px;
+    margin: 0;
+}
+
+.logos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--borde);
+    border-left: 1px solid var(--borde);
+}
+
+.logo-item {
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px;
+    background: #fff;
+    border-right: 1px solid var(--borde);
+    border-bottom: 1px solid var(--borde);
+    transition: .3s;
+}
+
+.logo-item img {
+    width: 100%;
+    max-width: 150px;
+    max-height: 85px;
+    object-fit: contain;
+    transition: .3s;
+}
+
+@media (max-width: 991px) {
+    .logos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 575px) {
+    .logos-seccion {
+        padding: 60px 0 70px;
+        margin-top: 50px;
+    }
+
+    .logos-encabezado h1 {
+        font-size: 30px;
+    }
+
+    .logos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .logo-item {
+        height: 130px;
+        padding: 22px;
+    }
+
+    .logo-item img {
+        max-width: 120px;
+        max-height: 65px;
+    }
+
+}

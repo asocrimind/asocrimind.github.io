@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos | ASOCRIMIND</title>
+    <link rel="icon" type="image/x-icon" href="/img/logo2.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/productos.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-inicio">
+        <div class="container-fluid px-4 px-lg-5">
+            <a href="index.html" class="navbar-brand marca">
+                <div class="logo">
+                    <img src="img/logo.png" alt="Logo de la empresa">
+                </div>
+                <div class="nombre-empresa">
+                    <strong>ASOCRIMIND</strong>
+                </div>
+            </a>
+            <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <aside class="menu-lateral" id="menuLateral">
+        <div class="menu-header">
+            <h3>Menú</h3>
+            <button id="cerrarMenu" aria-label="Cerrar menú">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <ul class="menu-lista">
+            <li>
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    Inicio
+                </a>
+            </li>
+            <li>
+                <a href="nosotros.html">
+                    <i class="fa-solid fa-users"></i>
+                    Nosotros
+                </a>
+            </li>
+            <li>
+                <a href="generales.html">
+                    <i class="fa-solid fa-car"></i>
+                    Servicios generales
+                </a>
+            </li>
+            <li>
+                <a href="periciales.html">
+                    <i class="fa-solid fa-person-falling"></i>
+                    Servicios periciales
+                </a>
+            </li>
+            <li>
+                <a href="informatica.html">
+                    <i class="fa-solid fa-computer"></i>
+                    Servicios en informática
+                </a>
+            </li>
+            <li>
+                <a href="productos.html">
+                    <i class="fa-solid fa-square-pen"></i>
+                    Productos
+                </a>
+            </li>
+            <li>
+                <a href="convenios.html">
+                    <i class="fa-solid fa-handshake"></i>
+                    Convenios y colaboraciones
+                </a>
+            </li>
+            <li>
+                <a href="contacto.html">
+                    <i class="fa-solid fa-envelope"></i>
+                    Contacto
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <header class="encabezado-productos">
+        <div class="encabezado-texto">
+            <span class="etiqueta">NUESTROS PRODUCTOS</span>
+            <h1>Productos pensados para ti.</h1>
+            <p>
+                Conoce nuestra selección de productos y
+                encuentra la opción que mejor se adapte
+                a tus necesidades.
+            </p>
+        </div>
+        <div class="encabezado-imagen">
+            <img src="img/productos.png" alt="Nuestros productos">
+        </div>
+    </header>
+
+    <section class="introduccion">
+        <div class="contenedor">
+            <span class="etiqueta">CATÁLOGO</span>
+            <h2>Conoce nuestros productos.</h2>
+            <p>
+                Ponemos a tu disposición diferentes productos
+                cuidadosamente seleccionados para ofrecerte
+                opciones de calidad y de acuerdo con tus
+                necesidades.
+            </p>
+        </div>
+    </section>
+
+    <section class="catalogo">
+        <div class="contenedor">
+            <div class="categoria-productos">
+                <div class="productos-grid">
+                    <article class="producto">
+                        <div class="producto-imagen">
+                            <img src="img/boligrafo_clasico.png" alt="Bolígrafo clásico">
+                        </div>
+                        <div class="producto-info">
+                            <span class="producto-numero">Precio unitario: $49 MXN</span>
+                            <h3>Bolígrafos - Línea clásica</h3>
+                            <div class="producto-datos">
+                                <span><i class="fa-solid fa-tape"></i>Material: aluminio</span>
+                                <span><i class="fa-solid fa-wand-sparkles"></i>Acabado: mate</span>
+                                <span><i class="fa-solid fa-droplet"></i>Tinta: negra</span>
+                            </div>
+                            <p>
+                                <strong><br>Beneficio para pedidos grupales</strong>
+                                En pedidos de 10 piezas o más cada bolígrafo incluye estuche individual 
+                                de cortesía.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="producto">
+                        <div class="producto-imagen">
+                            <img src="img/boligrafo_ejecutivo.png" alt="Bolígrafo ejecutivo">
+                        </div>
+                        <div class="producto-info">
+                            <span class="producto-numero">Precio unitario: $399 MXN</span>
+                            <h3>Bolígrafos - Línea ejecutiva</h3>
+                            <div class="producto-datos">
+                                <span><i class="fa-solid fa-tape"></i>Material: metal de alta calidad</span>
+                                <span><i class="fa-solid fa-wand-sparkles"></i>Acabado: mate</span>
+                                <span><i class="fa-solid fa-droplet"></i>Tinta: negra recargable</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="producto">
+                        <div class="producto-imagen">
+                            <img src="img/testigo.png" alt="Bolígrafo ejecutivo">
+                        </div>
+                        <div class="producto-info">
+                            <span class="producto-numero">Precio unitario: $99 MXN</span>
+                            <h3>Testigo métrico</h3>
+                            <div class="producto-datos">
+                                <span><i class="fa-solid fa-tape"></i>Material: aluminio</span>
+                                <span><i class="fa-solid fa-wand-sparkles"></i>Acabado: anonizado</span>
+                                <span><i class="fa-solid fa-droplet"></i>Tinta: negra</span>
+                            </div>
+                            <p>
+                                <strong><br>Función:</strong> bolígrafo y regla métrica
+                                <strong><br>Técnica:</strong> grabado láser de alta precisión
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="categoria-productos">
+                <div class="productos-grid">
+                    <article class="producto">
+                        <div class="producto-imagen">
+                            <img src="img/portagafetes_profesional.png" alt="Portagafete profesional">
+                        </div>
+                        <div class="producto-info">
+                            <span class="producto-numero">Precio unitario: $119 MXN</span>
+                            <h3>Portagafetes - Profesional</h3>
+                            <div class="producto-datos">
+                                <span><i class="fa-solid fa-tape"></i>Material: piel PU</span>
+                                <span><i class="fa-solid fa-palette"></i>Colores: negro</span>
+                                <span><i class="fa-regular fa-address-card"></i>Espacios: 1</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="producto">
+                        <div class="producto-imagen">
+                            <img src="img/portagafetes_ejecutivo.png" alt="Portagafete ejecutivo">
+                        </div>
+                        <div class="producto-info">
+                            <span class="producto-numero">Precio unitario: $329 MXN</span>
+                            <h3>Portagafetes - Ejecutivo</h3>
+                            <div class="producto-datos">
+                                <span><i class="fa-solid fa-tape"></i>Material: auténtica piel de becerro</span>
+                                <span><i class="fa-solid fa-palette"></i>Colores: negro</span>
+                                <span><i class="fa-regular fa-address-card"></i>Espacios: 3</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="producto">
+                        <div class="producto-imagen">
+                            <img src="img/carteras_elegance.png" alt="Carteras elgance">
+                        </div>
+                        <div class="producto-info">
+                            <span class="producto-numero">Precio unitario: $399 MXN</span>
+                            <h3>Carteras - Línea elegance</h3>
+                            <div class="producto-datos">
+                                <span><i class="fa-solid fa-tape"></i>Material: gamusa</span>
+                                <span><i class="fa-solid fa-wand-sparkles"></i>Acabado: elegante</span>
+                                <span><i class="fa-solid fa-palette"></i>Colores: rosa</span>
+                            </div>
+                            <p>
+                                <strong><br>Personalización:</strong> grabado láser
+                                <br>Espacios para tarjetas, billetes y monedas
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="categoria-productos">
+                <div class="productos-grid">
+                    <article class="producto">
+                        <div class="producto-imagen">
+                            <img src="img/cartera_ejecutiva.png" alt="Cartera ejecutiva">
+                        </div>
+                        <div class="producto-info">
+                            <span class="producto-numero">Precio unitario: $399 MXN</span>
+                            <h3>Carteras - Línea ejecutiva</h3>
+                            <div class="producto-datos">
+                                <span><i class="fa-solid fa-tape"></i>Material: piel de becerro genuina</span>
+                                <span><i class="fa-solid fa-wand-sparkles"></i>Acabado: liso premium</span>
+                                <span><i class="fa-solid fa-palette"></i>Colores: café oscuro y café claro</span>
+                            </div>
+                            <p>
+                                <strong><br>Personalización:</strong> grabado láser de alta precisión
+                                <br>Espacios para tarjetas, billetes y documentos
+                            </p>
+                        </div>
+                    </article>
+                    <article class="producto">
+                        <div class="producto-imagen">
+                            <img src="img/termos.png" alt="Termos">
+                        </div>
+                        <div class="producto-info">
+                            <span class="producto-numero">Precio unitario: $299 MXN</span>
+                            <h3>Termos</h3>
+                            <div class="producto-datos">
+                                <span><i class="fa-solid fa-tape"></i>Material: acero inoxidable de alta calidad</span>
+                                <span><i class="fa-solid fa-whiskey-glass"></i>Capacidad: 20oz</span>
+                                <span><i class="fa-solid fa-temperature-three-quarters"></i>Conserva la temperatura durante horas</span>
+                            </div>
+                            <p>
+                                <strong><br>Personalización:</strong> grabado láser permanente (no se despinta)
+                                para nombre, logotipo y diseño
+                                <br>Tapa antiderrames
+                            </p>
+                        </div>
+                    </article>
+                    <article class="producto">
+                        <div class="producto-imagen">
+                            <img src="img/libreta_studio.png" alt="Libreta Studio">
+                        </div>
+                        <div class="producto-info">
+                            <span class="producto-numero">Precio unitario: $79 MXN</span>
+                            <h3>Libreta - Studio</h3>
+                            <div class="producto-datos">
+                                <span><i class="fa-solid fa-tape"></i>Material: cubierta de cartón rígido y espiral métalico</span>
+                                <span><i class="fa-solid fa-palette"></i>Colores: sujetos a disponibilidad</span>
+                            </div>
+                            <p>
+                                <strong><br>Personalización:</strong> logotipo, nombre o diseño grabado con láser
+                                <br><strong>Incluye:</strong> bolígrafo a juego
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="categoria-productos">
+                <div class="productos-grid">
+                    <article class="producto">
+                        <div class="producto-imagen">
+                            <img src="img/libreta_profesional.png" alt="Libreta profesional">
+                        </div>
+                        <div class="producto-info">
+                            <span class="producto-numero">Precio unitario: $179 MXN</span>
+                            <h3>Libreta - Profesional</h3>
+                            <div class="producto-datos">
+                                <span><i class="fa-solid fa-tape"></i>Material: piel sintética de alta calidad</span>
+                                <span><i class="fa-solid fa-wand-sparkles"></i>Acabado: elegante y resistente</span>
+                                <span><i class="fa-solid fa-palette"></i>Colores: café, gris, negro y otros disponibles</span>
+                            </div>
+                            <p>
+                                <strong><br>Personalización:</strong> logotipo, nombre o diseño grabado con láser
+                                <br><strong>Marcador:</strong> listón separador de páginas
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="como-pedir">
+        <div class="contenedor">
+            <div class="titulo-seccion">
+                <span class="etiqueta">¿CÓMO REALIZAR TU PEDIDO?</span>
+                <h2>Comprar es sencillo.</h2>
+                <p>Sigue estos pasos para solicitar el producto que necesitas.</p>
+            </div>
+            <div class="pasos-pedido">
+                <div class="paso-pedido">
+                    <div class="icono-pedido">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <span>01</span>
+                    <h3>Escríbenos  por whatsapp</h3>
+                    <p>Comunicate al 33 1962 7087 y dinos que producto deseas</p>
+                </div>
+                <div class="paso-pedido">
+                    <div class="icono-pedido">
+                        <i class="fa-solid fa-pencil"></i>
+                    </div>
+                    <span>02</span>
+                    <h3>Cuéntanos cómo lo quieres</h3>
+                    <p>Adaptalo a tu gusto indicando: nombre, logotipo, profesión, frase o diseño</p>
+                </div>
+                <div class="paso-pedido">
+                    <div class="icono-pedido">
+                        <i class="fa-regular fa-address-card"></i>
+                    </div>
+                    <span>03</span>
+                    <h3>Confirma tu diseño y realiza el pago</h3>
+                    <p>Antes de producirlo confirmamos el diseño. una vez realizado el pago, comenzamos a elaborarlo</p>
+                </div>
+                <div class="paso-pedido">
+                    <div class="icono-pedido">
+                        <i class="fa-solid fa-truck"></i>
+                    </div>
+                    <span>04</span>
+                    <h3>Recógelo cerca de ti</h3>
+                    <p>Envíamos tu pedido mediante paquetería casa blanca. selecciona la sucursal de tu preferncia y cuando tu paquete esté disponible, recibirás los datos necesarios para recogerlo</p>
+                </div>     
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <div class="footer-marca">
+                        <img src="img/logo.png" alt="Logo">
+                        <div>
+                            <strong>ASOCRIMIND</strong>
+                            <span>ASOCIACIÓN DE CRIMINÓLOGOS Y CRIMINALISTAS INDEPENDIENTES. S.C</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p><strong>Director General</strong><br>Mtro. René Cruz Ramírez</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h4>Contacto</h4>
+                    <p><i class="fa-solid fa-envelope"></i> acciscdirecciongeneral@gmail.com</a>
+                    <p><i class="fa-solid fa-phone"></i> +52 33 2078 0878</a>
+                </div>
+                <div class="col-lg-2">
+                    <h4>Síguenos</h4>
+                    <div class="redes">
+                        <a href="https://www.facebook.com/ACCISC?locale=es_LA" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="http://linkedin.com/in/asocrimind-m%C3%A9xico-5993ba206" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://wa.me/3320780878" aria-label="WhatsApp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
