@@ -11,25 +11,25 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-inicio">
-    <div class="container-fluid px-4 px-lg-5">
-        <a href="index.html" class="navbar-brand marca">
-            <div class="logo">
-                <img src="img/logo.png" alt="Logo de la empresa">
-            </div>
-            <div class="nombre-empresa">
-                <strong>ASOCRIMIND</strong>
-            </div>
-        </a>
-        <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menú">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </div>
-</nav>
+    <nav class="navbar navbar-expand-lg navbar-inicio">
+        <div class="container-fluid px-4 px-lg-5">
+            <a href="index.html" class="navbar-brand marca">
+                <div class="logo">
+                    <img src="img/logo.png" alt="Logo de la empresa">
+                </div>
+                <div class="nombre-empresa">
+                    <strong>ASOCRIMIND</strong>
+                </div>
+            </a>
+            <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 
-<div class="menu-overlay" id="menuOverlay"></div>
+    <div class="menu-overlay" id="menuOverlay"></div>
     <aside class="menu-lateral" id="menuLateral">
         <div class="menu-header">
             <h3>Menú</h3>
@@ -38,57 +38,24 @@
             </button>
         </div>
         <ul class="menu-lista">
-            <li>
-                <a href="index.html">
-                    <i class="fa-solid fa-house"></i>
-                    Inicio
-                </a>
+            <li><a href="index.html"><i class="fa-solid fa-house"></i>Inicio</a></li>
+            <li><a href="nosotros.html"><i class="fa-solid fa-users"></i>Nosotros</a></li>
+            <li class="menu-servicios">
+                <button class="boton-servicios">
+                    <span><i class="fas fa-briefcase"></i>Servicios</span>
+                    <i class="fas fa-chevron-down flecha-servicios"></i>
+                </button>
+                <ul class="submenu-servicios">
+                    <li><a href="generales.html"><i class="fa-solid fa-car"></i>Servicios generales</a></li>
+                    <li><a href="periciales.html"><i class="fa-solid fa-person-falling"></i>Servicios periciales</a></li>
+                    <li><a href="informatica.html"><i class="fa-solid fa-computer"></i>Servicios en informática</a></li>
+                </ul>
             </li>
-            <li>
-                <a href="nosotros.html">
-                    <i class="fa-solid fa-users"></i>
-                    Nosotros
-                </a>
-            </li>
-            <li>
-                <a href="generales.html">
-                    <i class="fa-solid fa-car"></i>
-                    Servicios generales
-                </a>
-            </li>
-            <li>
-                <a href="periciales.html">
-                    <i class="fa-solid fa-person-falling"></i>
-                    Servicios periciales
-                </a>
-            </li>
-            <li>
-                <a href="informatica.html">
-                    <i class="fa-solid fa-computer"></i>
-                    Servicios en informática
-                </a>
-            </li>
-            <li>
-                <a href="productos.html">
-                    <i class="fa-solid fa-square-pen"></i>
-                    Productos
-                </a>
-            </li>
-            <li>
-                <a href="convenios.html">
-                    <i class="fa-solid fa-handshake"></i>
-                    Convenios y colaboraciones
-                </a>
-            </li>
-            <li>
-                <a href="contacto.html">
-                    <i class="fa-solid fa-envelope"></i>
-                    Contacto
-                </a>
-            </li>
+            <li><a href="productos.html"><i class="fa-solid fa-square-pen"></i>Productos</a></li>
+            <li><a href="convenios.html"><i class="fa-solid fa-handshake"></i>Convenios y colaboraciones</a></li>
+            <li><a href="contacto.html"><i class="fa-solid fa-envelope"></i>Contacto</a></li>
         </ul>
     </aside>
-
 
     <section id="inicio" class="hero">
         <div class="hero-overlay"></div>
@@ -261,6 +228,51 @@
                         </div>
                     </article>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contenido-destacado">
+        <div class="container">
+            <div class="encabezado-contenido">
+                <div>
+                    <span class="etiqueta">CONTENIDO DESTACADO</span>
+                    <h2>Información y casos que generan conversación</h2>
+                </div>
+                <p>
+                    Conoce parte del contenido que compartimos y algunos casos
+                    que permiten mostrar la importancia de la criminología
+                    y las ciencias forenses.
+                </p>
+            </div>
+            <div class="contenido-grid">
+                <article class="video-destacado video-principal">
+                    <div class="video-contenedor">
+                        <video controls>
+                            <source src="videos/informativo.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <span class="video-categoria">INFORMACIÓN</span>
+                        <h3>Conoce más sobre el costo del fraude</h3>
+                        <p>Un espacio informativo para conocer más sobre está situación.</p>
+                    </div>
+                </article>
+
+                <article class="video-destacado">
+                    <div class="video-contenedor">
+                        <video controls>
+                            <source src="videos/caso.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <span class="video-categoria">CASO DESTACADO</span>
+                        <h3>Un caso que generó gran interés</h3>
+                        <p>Analizamos el contexto de un caso que se volvió viral.</p>
+                    </div>
+                </article>
             </div>
         </div>
     </section>

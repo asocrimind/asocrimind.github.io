@@ -39,54 +39,22 @@
             </button>
         </div>
         <ul class="menu-lista">
-            <li>
-                <a href="index.html">
-                    <i class="fa-solid fa-house"></i>
-                    Inicio
-                </a>
+            <li><a href="index.html"><i class="fa-solid fa-house"></i>Inicio</a></li>
+            <li><a href="nosotros.html"><i class="fa-solid fa-users"></i>Nosotros</a></li>
+            <li class="menu-servicios">
+                <button class="boton-servicios">
+                    <span><i class="fas fa-briefcase"></i>Servicios</span>
+                    <i class="fas fa-chevron-down flecha-servicios"></i>
+                </button>
+                <ul class="submenu-servicios">
+                    <li><a href="generales.html"><i class="fa-solid fa-car"></i>Servicios generales</a></li>
+                    <li><a href="periciales.html"><i class="fa-solid fa-person-falling"></i>Servicios periciales</a></li>
+                    <li><a href="informatica.html"><i class="fa-solid fa-computer"></i>Servicios en informática</a></li>
+                </ul>
             </li>
-            <li>
-                <a href="nosotros.html">
-                    <i class="fa-solid fa-users"></i>
-                    Nosotros
-                </a>
-            </li>
-            <li>
-                <a href="generales.html">
-                    <i class="fa-solid fa-car"></i>
-                    Servicios generales
-                </a>
-            </li>
-            <li>
-                <a href="periciales.html">
-                    <i class="fa-solid fa-person-falling"></i>
-                    Servicios periciales
-                </a>
-            </li>
-            <li>
-                <a href="informatica.html">
-                    <i class="fa-solid fa-computer"></i>
-                    Servicios en informática
-                </a>
-            </li>
-            <li>
-                <a href="productos.html">
-                    <i class="fa-solid fa-square-pen"></i>
-                    Productos
-                </a>
-            </li>
-            <li>
-                <a href="convenios.html">
-                    <i class="fa-solid fa-handshake"></i>
-                    Convenios y colaboraciones
-                </a>
-            </li>
-            <li>
-                <a href="contacto.html">
-                    <i class="fa-solid fa-envelope"></i>
-                    Contacto
-                </a>
-            </li>
+            <li><a href="productos.html"><i class="fa-solid fa-square-pen"></i>Productos</a></li>
+            <li><a href="convenios.html"><i class="fa-solid fa-handshake"></i>Convenios y colaboraciones</a></li>
+            <li><a href="contacto.html"><i class="fa-solid fa-envelope"></i>Contacto</a></li>
         </ul>
     </aside>
 
@@ -121,6 +89,9 @@
     <section class="catalogo">
         <div class="contenedor">
             <div class="categoria-productos">
+                <div class="titulo-categoria">
+                    <h2>Línea clásica</h2>
+                </div>
                 <div class="productos-grid">
                     <article class="producto">
                         <div class="producto-imagen">
@@ -173,10 +144,6 @@
                             </p>
                         </div>
                     </article>
-                </div>
-            </div>
-            <div class="categoria-productos">
-                <div class="productos-grid">
                     <article class="producto">
                         <div class="producto-imagen">
                             <img src="img/portagafetes_profesional.png" alt="Portagafete profesional">
@@ -223,10 +190,6 @@
                             </p>
                         </div>
                     </article>
-                </div>
-            </div>
-            <div class="categoria-productos">
-                <div class="productos-grid">
                     <article class="producto">
                         <div class="producto-imagen">
                             <img src="img/cartera_ejecutiva.png" alt="Cartera ejecutiva">
@@ -281,10 +244,6 @@
                             </p>
                         </div>
                     </article>
-                </div>
-            </div>
-            <div class="categoria-productos">
-                <div class="productos-grid">
                     <article class="producto">
                         <div class="producto-imagen">
                             <img src="img/libreta_profesional.png" alt="Libreta profesional">
@@ -304,53 +263,317 @@
                         </div>
                     </article>
                 </div>
+                <div class="proceso-linea">
+                    <div>
+                        <span class="proceso-linea-etiqueta">ADQUISICIÓN</span>
+                        <p>
+                            Conoce el proceso para adquirir los productos
+                            de la <strong>línea clásica</strong>.
+                        </p>
+                    </div>
+                    <button type="button" class="btn-proceso" data-proceso="linea1">
+                        Ver proceso
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="categoria-productos">
+                <div class="titulo-categoria">
+                    <h2>Línea forense</h2>
+                </div>
+                <div class="productos-grid">
+                    <article class="producto">
+                        <div class="producto-imagen">
+                            <img src="img/pulsera.png" alt="Pulsera línea amarilla">
+                        </div>
+                        <div class="producto-info">
+                            <span class="producto-numero">Precio: $30 MXN</span>
+                            <h3>Pulsera línea amarilla</h3>
+                            <div class="producto-datos">
+                                <span><i class="fa-solid fa-tape"></i>Material: textil ligero</span>
+                                <span><i class="fa-solid fa-palette"></i>Colores: amarillo y negro</span>
+                            </div>
+                            <p>
+                                <br>Pulsera textil ligera en color amarillo, con impresión negra de la leyenda 
+                                CRIME SCENE DO NOT CROSS y huella dactilar. 
+                            </p>
+                        </div>
+                    </article>
+                    <article class="producto">
+                        <div class="producto-imagen">
+                            <img src="img/candados.png" alt="Candados de mano">
+                        </div>
+                        <div class="producto-info">
+                            <span class="producto-numero">Precio: $30/$40 MXN</span>
+                            <h3>Candados de mano</h3>
+                            <div class="producto-datos">
+                                <span><i class="fa-solid fa-tape"></i>Material: cordón y aleación de níquel</span>
+                                <span><i class="fa-solid fa-wand-sparkles"></i>Acabado: plateado</span>
+                            </div>
+                            <p>
+                                <br>Pulsera de cordón negro ajustable con dije de candados de mano. Se
+                                encuentra disponible en dos tamaños para elegir según el estilo de uso
+                            </p>
+                        </div>
+                    </article>
+                    <article class="producto">
+                        <div class="producto-imagen">
+                            <img src="img/crime.png" alt="Crime Scene">
+                        </div>
+                        <div class="producto-info">
+                            <span class="producto-numero">Precio: $60 MXN</span>
+                            <h3>Crime Scene</h3>
+                            <div class="producto-datos">
+                                <span><i class="fa-solid fa-tape"></i>Material: textil y aleación de níquel</span>
+                                <span><i class="fa-solid fa-wand-sparkles"></i>Acabado: plateado u oro viejo</span>
+                            </div>
+                            <p>
+                                <br>Pulsera textil elástica con dijes de temática forense. Hay varias
+                                composiciones disponibles.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="producto">
+                        <div class="producto-imagen">
+                            <img src="img/pulsera_crimi.png" alt="Pulsera de criminalística">
+                        </div>
+                        <div class="producto-info">
+                            <span class="producto-numero">Precio: $140 MXN</span>
+                            <h3>Pulsera de criminalística (Modelo 1)</h3>
+                            <div class="producto-datos">
+                                <span><i class="fa-solid fa-tape"></i>Material: aleación de níquel</span>
+                                <span><i class="fa-solid fa-wand-sparkles"></i>Acabado: oro viejo</span>
+                            </div>
+                            <p>
+                                <br>Composición de cadena y dijes de temática criminalística en acabado oro
+                                viejo. Cada elemento forma parte del diseño mostrado y se entrega en esa misma composición.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="producto">
+                        <div class="producto-imagen">
+                            <img src="img/pulsera_crimi2.png" alt="Pulsera de criminalística">
+                        </div>
+                        <div class="producto-info">
+                            <span class="producto-numero">Precio: $185 MXN</span>
+                            <h3>Pulsera de criminalística (Modelo 2)</h3>
+                            <div class="producto-datos">
+                                <span><i class="fa-solid fa-tape"></i>Material: aleación de níquel</span>
+                                <span><i class="fa-solid fa-wand-sparkles"></i>Acabado: oro viejo</span>
+                            </div>
+                            <p>
+                                <br>Pulsera de cadena con dijes forenses en acabado oro viejo. Incluye dos
+                                piezas elaboradas completamente a mano que distinguen este modelo.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="producto">
+                        <div class="producto-imagen">
+                            <img src="img/pulsera_derecho.png" alt="Pulsera de derecho">
+                        </div>
+                        <div class="producto-info">
+                            <span class="producto-numero">Precio: $130 MXN</span>
+                            <h3>Pulsera de derecho</h3>
+                            <div class="producto-datos">
+                                <span><i class="fa-solid fa-tape"></i>Material: aleación de níquel</span>
+                                <span><i class="fa-solid fa-wand-sparkles"></i>Acabado: oro viejo</span>
+                            </div>
+                            <p>
+                                <br>Composición de cadena con dijes alusivos al ámbito jurídico. El acabado oro
+                                viejo resalta el detalle de la balanza y los demás elementos del diseño.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="producto">
+                        <div class="producto-imagen">
+                            <img src="img/llavero_crimi.png" alt="Llavero de criminalística">
+                        </div>
+                        <div class="producto-info">
+                            <span class="producto-numero">Precio: $80 MXN</span>
+                            <h3>Llavero de criminalística (Modelo 1)</h3>
+                            <div class="producto-datos">
+                                <span><i class="fa-solid fa-tape"></i>Material: aleación de níquel</span>
+                                <span><i class="fa-solid fa-wand-sparkles"></i>Acabado: oro viejo</span>
+                            </div>
+                            <p>
+                                <br>Llavero de cadena con una composición de dijes de temática criminalística.
+                                Cuenta con gancho metálico y cinta amarilla estilo escena del crimen.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="producto">
+                        <div class="producto-imagen">
+                            <img src="img/llavero_crimi2.png" alt="Llavero de criminalística">
+                        </div>
+                        <div class="producto-info">
+                            <span class="producto-numero">Precio: $80 MXN</span>
+                            <h3>Llavero de criminalística (Modelo 2)</h3>
+                            <div class="producto-datos">
+                                <span><i class="fa-solid fa-tape"></i>Material: aleación de níquel</span>
+                                <span><i class="fa-solid fa-wand-sparkles"></i>Acabado: oro viejo</span>
+                            </div>
+                            <p>
+                                <br>Llavero largo de cadena con dijes forenses, gancho metálico y cinta amarilla.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="producto">
+                        <div class="producto-imagen">
+                            <img src="img/llavero_crimi3.png" alt="Llavero de criminalística">
+                        </div>
+                        <div class="producto-info">
+                            <span class="producto-numero">Precio: $130 MXN</span>
+                            <h3>Llavero de criminalística (Modelo 3)</h3>
+                            <div class="producto-datos">
+                                <span><i class="fa-solid fa-tape"></i>Material: aleación de níquel</span>
+                                <span><i class="fa-solid fa-wand-sparkles"></i>Acabado: plateado</span>
+                            </div>
+                            <p>
+                                <br>Composición plateada con dijes de criminalística y una figura de
+                                criminalista esmaltada. 
+                            </p>
+                        </div>
+                    </article>
+                    <article class="producto">
+                        <div class="producto-imagen">
+                            <img src="img/llavero_crimi4.png" alt="Llavero de criminalística">
+                        </div>
+                        <div class="producto-info">
+                            <span class="producto-numero">Precio: $200 MXN</span>
+                            <h3>Llavero de criminalística (Modelo 4)</h3>
+                            <div class="producto-datos">
+                                <span><i class="fa-solid fa-tape"></i>Material: aleación de níquel y figura</span>
+                                <span><i class="fa-solid fa-wand-sparkles"></i>Acabado: plateado</span>
+                            </div>
+                            <p>
+                                <br>Modelo con figura tridimensional de criminalista. Al activarse, la luz se
+                                enciende en la parte frontal y reproduce el sonido “I love you”.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="producto">
+                        <div class="producto-imagen">
+                            <img src="img/llavero_derecho.png" alt="Llavero de derecho">
+                        </div>
+                        <div class="producto-info">
+                            <span class="producto-numero">Precio: $80 MXN</span>
+                            <h3>Llavero de derecho</h3>
+                            <div class="producto-datos">
+                                <span><i class="fa-solid fa-tape"></i>Material: aleación de níquel</span>
+                                <span><i class="fa-solid fa-wand-sparkles"></i>Acabado: oro viejo</span>
+                            </div>
+                            <p>
+                                <br>Llavero de cadena con dijes alusivos al ámbito jurídico. La balanza funciona
+                                como pieza principal dentro de la composición en oro viejo.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="producto">
+                        <div class="producto-imagen">
+                            <img src="img/granadas.png" alt="Granadas">
+                        </div>
+                        <div class="producto-info">
+                            <span class="producto-numero">Precio: $60 MXN</span>
+                            <h3>Granadas</h3>
+                            <div class="producto-datos">
+                                <span><i class="fa-solid fa-tape"></i>Material: aleación de níquel</span>
+                                <span><i class="fa-solid fa-wand-sparkles"></i>Acabado: oro viejo y plateado</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="producto">
+                        <div class="producto-imagen">
+                            <img src="img/cerebro.png" alt="Cerebro">
+                        </div>
+                        <div class="producto-info">
+                            <span class="producto-numero">Precio: $50 MXN</span>
+                            <h3>Cerebro</h3>
+                            <div class="producto-datos">
+                                <span><i class="fa-solid fa-tape"></i>Material: aleación de níquel</span>
+                                <span><i class="fa-solid fa-wand-sparkles"></i>Acabado: plateado</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="producto">
+                        <div class="producto-imagen">
+                            <img src="img/revolver.png" alt="Collar de revólver">
+                        </div>
+                        <div class="producto-info">
+                            <span class="producto-numero">Precio: $130 MXN</span>
+                            <h3>Collar de revólver</h3>
+                            <div class="producto-datos">
+                                <span><i class="fa-solid fa-tape"></i>Material: acero inoxidable</span>
+                                <span><i class="fa-solid fa-palette"></i>Color: plateado</span>
+                            </div>
+                            <p>
+                                <br>Collar y dije de revólver fabricados en acero inoxidable. El acabado
+                                plateado permite apreciar el relieve de la pieza y combina con la cadena.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="producto">
+                        <div class="producto-imagen">
+                            <img src="img/dije.png" alt="Dije de granada de fragmentación">
+                        </div>
+                        <div class="producto-info">
+                            <span class="producto-numero">Precio: $150 MXN</span>
+                            <h3>Dije de granada de fragmentación</h3>
+                            <div class="producto-datos">
+                                <span><i class="fa-solid fa-tape"></i>Material: acero inoxidable</span>
+                                <span><i class="fa-solid fa-palette"></i>Color: dorado</span>
+                            </div>
+                            <p>
+                                <br>Dije dorado de granada de fragmentación, de mayor tamaño y con peso
+                                perceptible. Se entrega con collar negro esmaltado.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="producto">
+                        <div class="producto-imagen">
+                            <img src="img/aretes.png" alt="Aretes de armas">
+                        </div>
+                        <div class="producto-info">
+                            <span class="producto-numero">Precio (por el par): $30 MXN</span>
+                            <h3>Aretes de armas</h3>
+                            <div class="producto-datos">
+                                <span><i class="fa-solid fa-tape"></i>Material: plástico ligero</span>
+                                <span><i class="fa-solid fa-palette"></i>Color: negro</span>
+                            </div>
+                            <p>
+                                <br>Aretes de plástico negro, ligeros y de aproximadamente 3 cm. Hay varios
+                                modelos disponibles; consulta existencias al realizar tu pedido.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+                <div class="proceso-linea">
+                    <div>
+                        <span class="proceso-linea-etiqueta">ADQUISICIÓN</span>
+                        <p>
+                            Conoce el proceso para adquirir los productos
+                            de la <strong>línea forense</strong>.
+                        </p>
+                    </div>
+                    <button type="button" class="btn-proceso" data-proceso="linea2">
+                        Ver proceso
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="como-pedir">
-        <div class="contenedor">
-            <div class="titulo-seccion">
-                <span class="etiqueta">¿CÓMO REALIZAR TU PEDIDO?</span>
-                <h2>Comprar es sencillo.</h2>
-                <p>Sigue estos pasos para solicitar el producto que necesitas.</p>
-            </div>
-            <div class="pasos-pedido">
-                <div class="paso-pedido">
-                    <div class="icono-pedido">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </div>
-                    <span>01</span>
-                    <h3>Escríbenos  por whatsapp</h3>
-                    <p>Comunicate al 33 1962 7087 y dinos que producto deseas</p>
-                </div>
-                <div class="paso-pedido">
-                    <div class="icono-pedido">
-                        <i class="fa-solid fa-pencil"></i>
-                    </div>
-                    <span>02</span>
-                    <h3>Cuéntanos cómo lo quieres</h3>
-                    <p>Adaptalo a tu gusto indicando: nombre, logotipo, profesión, frase o diseño</p>
-                </div>
-                <div class="paso-pedido">
-                    <div class="icono-pedido">
-                        <i class="fa-regular fa-address-card"></i>
-                    </div>
-                    <span>03</span>
-                    <h3>Confirma tu diseño y realiza el pago</h3>
-                    <p>Antes de producirlo confirmamos el diseño. una vez realizado el pago, comenzamos a elaborarlo</p>
-                </div>
-                <div class="paso-pedido">
-                    <div class="icono-pedido">
-                        <i class="fa-solid fa-truck"></i>
-                    </div>
-                    <span>04</span>
-                    <h3>Recógelo cerca de ti</h3>
-                    <p>Envíamos tu pedido mediante paquetería casa blanca. selecciona la sucursal de tu preferncia y cuando tu paquete esté disponible, recibirás los datos necesarios para recogerlo</p>
-                </div>     
-            </div>
+    <div class="modal-proceso" id="modalProceso">
+        <div class="modal-proceso-contenido">
+            <button type="button" class="cerrar-proceso" id="cerrarProceso"><i class="fas fa-times"></i></button>
+            <span class="etiqueta" id="modalEtiqueta">PROCESO DE ADQUISICIÓN</span>
+            <h2 id="modalTitulo">¿Cómo adquirir estos productos?</h2>
+            <p class="modal-descripcion" id="modalDescripcion">Conoce los pasos para realizar tu solicitud.</p>
+            <div class="pasos-modal" id="pasosModal"></div>
+            <div class="modal-contacto"></div>
         </div>
-    </section>
+    </div>
 
     <footer class="footer">
         <div class="container">
