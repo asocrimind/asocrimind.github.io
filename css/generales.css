@@ -359,6 +359,14 @@ img {
     margin-bottom: 15px;
 }
 
+#carruselNosotros {
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.12);
+}
+
 .proceso {
     background: var(--crema);
     padding: 100px 0;

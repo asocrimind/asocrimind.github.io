@@ -533,10 +533,6 @@ h2 {
     margin-top: 50px;
 }
 
-/* =====================================
-   CONTENIDO DESTACADO
-===================================== */
-
 .contenido-destacado {
     padding: 110px 0;
     background: var(--color-claro);
@@ -561,15 +557,11 @@ h2 {
     font-size: 14px;
 }
 
-/* GRID */
-
 .contenido-grid {
     display: grid;
     grid-template-columns: 1.25fr 1fr;
     gap: 30px;
 }
-
-/* BLOQUE */
 
 .video-destacado {
     background: var(--blanco);
@@ -588,8 +580,6 @@ h2 {
     display: block;
     object-fit: cover;
 }
-
-/* INFORMACIÓN */
 
 .video-info {
     padding: 30px;

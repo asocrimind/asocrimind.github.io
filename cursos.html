@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oferta académica | ASOCRIMIND</title>
+    <link rel="icon" type="image/x-icon" href="/img/logo2.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/cursos.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-inicio">
+        <div class="container-fluid px-4 px-lg-5">
+            <a href="index.html" class="navbar-brand marca">
+                <div class="logo">
+                    <img src="img/logo.png" alt="Logo de la empresa">
+                </div>
+                <div class="nombre-empresa">
+                    <strong>ASOCRIMIND</strong>
+                </div>
+            </a>
+            <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <aside class="menu-lateral" id="menuLateral">
+        <div class="menu-header">
+            <h3>Menú</h3>
+            <button id="cerrarMenu" aria-label="Cerrar menú">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <ul class="menu-lista">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i>Inicio</a></li>
+            <li><a href="nosotros.html"><i class="fa-solid fa-users"></i>Nosotros</a></li>
+            <li class="menu-servicios">
+                <button class="boton-servicios">
+                    <span><i class="fas fa-briefcase"></i>Servicios</span>
+                    <i class="fas fa-chevron-down flecha-servicios"></i>
+                </button>
+                <ul class="submenu-servicios">
+                    <li><a href="generales.html"><i class="fa-solid fa-car"></i>Servicios generales</a></li>
+                    <li><a href="periciales.html"><i class="fa-solid fa-person-falling"></i>Servicios periciales</a></li>
+                    <li><a href="informatica.html"><i class="fa-solid fa-computer"></i>Servicios en informática</a></li>
+                </ul>
+            </li>
+            <li><a href="productos.html"><i class="fa-solid fa-square-pen"></i>Productos</a></li>
+            <li><a href="cursos.html"><i class="fa-solid fa-graduation-cap"></i>Oferta académica</a></li>
+            <li><a href="convenios.html"><i class="fa-solid fa-handshake"></i>Convenios y colaboraciones</a></li>
+            <li><a href="contacto.html"><i class="fa-solid fa-envelope"></i>Contacto</a></li>
+        </ul>
+    </aside>
+
+    <header class="encabezado-cursos">
+        <div class="container">
+            <span class="etiqueta">FORMACIÓN PROFESIONAL</span>
+            <h1>Cursos y formación</h1>
+            <p>
+                Espacios de aprendizaje orientados al desarrollo de
+                conocimientos y habilidades en el ámbito de la criminología,
+                criminalística y las ciencias forenses.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section class="curso-destacado">
+            <div class="container">
+                <div class="curso-destacado-grid">
+                    <div class="curso-imagen">
+                        <img src="img/diplomado.jpg" alt="Diplomado destacado">
+                    </div>
+                    <div class="curso-contenido">
+                        <span class="etiqueta">DIPLOMADO DESTACADO</span>
+                        <h2>Análisis técnico/científico y jurídico de los hechos de tránsito terrestre</h2>
+                        <p class="curso-descripcion">
+                            El objetivo del presente diplomado es que el estudiante de perfil educativo superior tenga las
+                            habilidades, competencias y bases sólidas académicas en la investigación de hechos de tránsito 
+                            terrestre, en el análisis del lugar de los hechos, la investigación técnica de los vehículos y 
+                            los factores humanos, además de que todo ello se haga dentro del margen legal, científico, 
+                            pericial y ético.
+                        </p>
+                        <div class="datos-curso">
+                            <div>
+                                <span><i class="fas fa-clock"></i>DURACIÓN</span>
+                                <strong>Seis meses</strong>
+                            </div>
+                            <div>
+                                <span><i class="fas fa-laptop"></i>MODALIDAD</span>
+                                <strong>Virtual</strong>
+                            </div>
+                            <div>
+                                <span><i class="fas fa-user"></i>DIRIGIDO A</span>
+                                <strong>Profesionales y estudiantes del ámbito jurídico, técnico y vial.</strong>
+                            </div>
+                        </div>
+                        <div class="curso-acciones">
+                            <button class="btn-principal" type="button" data-bs-toggle="modal" data-bs-target="#modalCurso">
+                                Ver información
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!--        <section class="informacion-cursos">
+            <div class="container">
+                <div class="titulo-seccion">
+                    <div>
+                        <span class="etiqueta">FORMACIÓN</span>
+
+                        <h2>
+                            Nuestra oferta académica
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        Consulta los cursos disponibles y encuentra
+                        alternativas de formación de acuerdo con tus
+                        intereses y necesidades.
+                    </p>
+
+                </div>
+
+
+                <article class="curso-lista">
+
+                    <div class="curso-lista-numero">
+                        01
+                    </div>
+
+                    <div class="curso-lista-info">
+
+                        <span>
+                            CURSO
+                        </span>
+
+                        <h3>
+                            Introducción a la Criminalística
+                        </h3>
+
+                        <p>
+                            Conoce los conceptos fundamentales de la
+                            criminalística y su aplicación dentro de la
+                            investigación de hechos.
+                        </p>
+
+                    </div>
+
+                    <div class="curso-lista-datos">
+
+                        <span>
+                            <i class="fas fa-clock"></i>
+                            20 horas
+                        </span>
+
+                        <span>
+                            <i class="fas fa-location-dot"></i>
+                            Presencial
+                        </span>
+
+                    </div>
+
+                    <button
+                        class="btn-ver-curso"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modalCurso">
+
+                        Ver curso
+                        <i class="fas fa-arrow-right"></i>
+
+                    </button>
+
+                </article>
+
+
+
+                <article class="curso-lista">
+
+                    <div class="curso-lista-numero">
+                        02
+                    </div>
+
+                    <div class="curso-lista-info">
+
+                        <span>
+                            TALLER
+                        </span>
+
+                        <h3>
+                            Fotografía Forense
+                        </h3>
+
+                        <p>
+                            Principios básicos de documentación fotográfica
+                            aplicada al trabajo forense.
+                        </p>
+
+                    </div>
+
+                    <div class="curso-lista-datos">
+
+                        <span>
+                            <i class="fas fa-clock"></i>
+                            8 horas
+                        </span>
+
+                        <span>
+                            <i class="fas fa-location-dot"></i>
+                            Presencial
+                        </span>
+
+                    </div>
+
+                    <button
+                        class="btn-ver-curso"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modalCurso">
+
+                        Ver curso
+                        <i class="fas fa-arrow-right"></i>
+
+                    </button>
+
+                </article>
+
+
+                <article class="curso-lista">
+
+                    <div class="curso-lista-numero">
+                        03
+                    </div>
+
+                    <div class="curso-lista-info">
+
+                        <span>
+                            CURSO
+                        </span>
+
+                        <h3>
+                            Investigación Criminal
+                        </h3>
+
+                        <p>
+                            Introducción a las herramientas y procedimientos
+                            utilizados en la investigación criminal.
+                        </p>
+
+                    </div>
+
+                    <div class="curso-lista-datos">
+
+                        <span>
+                            <i class="fas fa-clock"></i>
+                            15 horas
+                        </span>
+
+                        <span>
+                            <i class="fas fa-laptop"></i>
+                            En línea
+                        </span>
+
+                    </div>
+
+                    <button
+                        class="btn-ver-curso"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modalCurso">
+
+                        Ver curso
+                        <i class="fas fa-arrow-right"></i>
+
+                    </button>
+
+                </article>
+
+            </div>
+
+        </section> -->
+    </main>
+
+    <div class="modal fade" id="modalCurso" tabindex="-1" aria-labelledby="modalCursoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content modal-curso">
+                <div class="modal-header">
+                    <div>
+                        <span class="etiqueta">INFORMACIÓN DEL CURSO</span>
+                        <h2 id="modalCursoLabel">Análisis técnico/científico y jurídico de los hechos de tránsito terrestre</h2>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-grid">
+                        <h3>Dirigido a</h3>
+                        <ul>
+                            <li>Abogados</li>
+                            <li>Peritos en hechos de tránsito terrestre, valuación e identificación vehícular, entre otros</li>
+                            <li>Ingenierías afines a los hechos de tránsito</li>
+                            <li>Trabajadores del servicio público o privado en materia de vialidad, transito o transporte, aseguradoras, bancos, mutualidades, agentes de seguros, entre otros</li>
+                            <li>Estudiantes de nivel superior en áreas del derecho, criminología y criminalística, así como diversas ingenierías afines</li>
+                            <li>Público en general, enfocado en la temática de los hechos de tránsito terrestre</li>
+                        </ul>
+                    </div>
+                    <div class="temario">
+                        <h3>Programa de estudio</h3>
+                        <p>El egresado podrá desempeñarse en las siguientes áreas. Podrá ingresar a laborar en 
+                            fiscalías estatales o federales, instituciones dedicadas a la investigación de hechos 
+                            viales como pueden ser, secretarías de tránsito, movilidad y transporte, laborar como 
+                            perito en hechos de tránsito terrestre, ejercer de manera privada ante los tribunales 
+                            correspondientes, trabajar en tribunales como perito especializado así como en aseguradoras 
+                            y bancos en lo referente a hechos de tránsito terrestre.
+                        </p>
+                        <div class="temario-lista">
+                            <div>
+                                <span>01</span>
+                                <p>Introducción a los hechos de tránsito <br>(10 horas)</p>
+                            </div>
+                            <div>
+                                <span>02</span>
+                                <p>Criminalística aplicada al tránsito terrestre <br>(25 horas)</p>
+                            </div>
+                            <div>
+                                <span>03</span>
+                                <p>Criminología vial <br>(15 horas)</p>
+                            </div>
+                            <div>
+                                <span>04</span>
+                                <p>Lesiones viales y atención médico legal <br>(20 horas)</p>
+                            </div>
+                            <div>
+                                <span>05</span>
+                                <p>Aseguradoras y gestión del riesgo vial <br>(20 horas)</p>
+                            </div>
+                            <div>
+                                <span>06</span>
+                                <p>Ley de movilidad y legislación vial <br>(20 horas)</p>
+                            </div>
+                            <div>
+                                <span>07</span>
+                                <p>Identificación vehicular y documentoscopía <br>(20 horas)</p>
+                            </div>
+                            <div>
+                                <span>08</span>
+                                <p>Integración de casos y simulación de peritaje <br>(20 - 30 horas)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-datos">
+                        <div>
+                            <span>Impartido por</span>
+                            <strong><a href="documentos/sintesis.jpg" target="_blank">Mtro. René Cruz Ramírez</a></strong>
+                        </div>
+                        <div>
+                            <span>Precio</span>
+                            <strong>Al contado: $7,880 MXN</strong>
+                        </div>
+                        <div>
+                            <span>Requisitos de ingreso</span>
+                            <strong>Identificación con fotografía, CURP, último comprobante de estudios, ficha de inscripción, comprobante de pago de mensualidad</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <p>¿Te interesa este curso?</p>
+                    <p>Comunícate al télefono: 33 2078 0878</p>
+                    <p>O mandanos un correo a: acciscdirecciongeneral@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <div class="footer-marca">
+                        <img src="img/logo.png" alt="Logo">
+                        <div>
+                            <strong>ASOCRIMIND</strong>
+                            <span>ASOCIACIÓN DE CRIMINÓLOGOS Y CRIMINALISTAS INDEPENDIENTES. S.C</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p><strong>Director General</strong><br>Mtro. René Cruz Ramírez</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h4>Contacto</h4>
+                    <p><i class="fa-solid fa-envelope"></i> acciscdirecciongeneral@gmail.com</a>
+                    <p><i class="fa-solid fa-phone"></i> +52 33 2078 0878</a>
+                </div>
+                <div class="col-lg-2">
+                    <h4>Síguenos</h4>
+                    <div class="redes">
+                        <a href="https://www.facebook.com/ACCISC?locale=es_LA" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="http://linkedin.com/in/asocrimind-m%C3%A9xico-5993ba206" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://wa.me/3320780878" aria-label="WhatsApp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
