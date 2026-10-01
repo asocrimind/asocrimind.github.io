@@ -890,6 +890,9 @@ img {
 
 
 @media (max-width: 400px) {
+    .container {
+        margin-top: 20px;
+    }
 
     .encabezado-cursos h1 {
         font-size: 34px;
@@ -897,6 +900,18 @@ img {
 
     .curso-imagen {
         height: 280px;
+    }
+
+    #diplomado {
+        overflow: hidden;
+        object-fit: cover;
+        object-position: right center;
+        transform: scale(1.57);
+        transform-origin: right center;
+    }
+
+    .curso-contenido {
+        margin-top: 45px;
     }
 
     .curso-contenido h2 {

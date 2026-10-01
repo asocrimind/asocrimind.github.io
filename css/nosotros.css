@@ -928,6 +928,20 @@ img {
         height: 320px;
     }
 
+    .perfil-imagen img {
+        overflow: hidden;
+    }
+
+    #dan {
+        object-fit: cover;
+        object-position: center 10%;
+    }
+
+    #ser {
+        object-fit: contain;
+        object-position: center 10%;
+    }
+
     .perfil-info,
     .perfil-invertido .perfil-info {
         padding-top: 30px;

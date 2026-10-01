@@ -1058,9 +1058,14 @@ img {
     }
 
     .producto-imagen {
-        height: 220px;
+        height: 250px;
     }
 
+    #clasica .producto-imagen img {
+        overflow: hidden;
+        object-fit: contain;
+    }
+    
     .producto-info {
         padding: 20px;
     }

@@ -679,13 +679,21 @@ img {
         width: 270px;
     }
 
+    .container {
+        margin-top: 20px;
+    }
+
     .contacto-info h2 {
         font-size: 24px;
     }
 
+    .frase-contacto, .contacto-logo {
+        border-top: none;
+    }
+
     .logo-contenedor {
-        width: 190px;
-        height: 190px;
+        width: 300px;
+        height: 300px;
     }
 
 }
