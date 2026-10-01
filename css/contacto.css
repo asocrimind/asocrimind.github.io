@@ -691,9 +691,14 @@ img {
         border-top: none;
     }
 
-    .logo-contenedor {
-        width: 300px;
-        height: 300px;
+    .contacto-logo {
+        background-image: url("../img/logo.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 300px;
     }
 
+    .logo-contenedor img {
+        visibility: hidden;
+    }
 }
