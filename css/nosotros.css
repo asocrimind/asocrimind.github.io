@@ -750,7 +750,13 @@ img {
     }
 
     .encabezado-imagen {
-        height: 220px;
+        height: 300px;
+    }
+
+    .encabezado-imagen img {
+        overflow: hidden;
+        object-fit: cover;
+        object-position: center 10%;
     }
 
     .perfil {
@@ -762,6 +768,20 @@ img {
         display: flex;
         flex-direction: column;
         min-height: auto;
+    }
+
+    .perfil-imagen img {
+        overflow: hidden;
+    }
+
+    #dan {
+        object-fit: cover;
+        object-position: center 10%;
+    }
+
+    #ser {
+        object-fit: contain;
+        object-position: center 10%;
     }
 
     .perfil-imagen,

@@ -746,7 +746,8 @@ img {
     }
 
     .servicio-principal {
-        padding: 65px 0;
+        margin-left: 15px;
+        margin-right: 15px;
     }
 
     .servicio-introduccion {

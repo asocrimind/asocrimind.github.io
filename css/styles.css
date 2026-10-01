@@ -893,6 +893,11 @@ h2 {
     .servicio-imagen {
         height: 220px;
     }
+    #poliza {
+        overflow: hidden;
+        object-fit: cover;
+        object-position: center 10%;
+    }
     .servicio-contenido {
         padding: 25px;
     }
