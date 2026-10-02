@@ -619,6 +619,21 @@ img {
     margin: 0;
 }
 
+.btn-arriba {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #1d3b36;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    z-index: 1000;
+}
 
 .footer {
     padding: 70px 0 70px;
